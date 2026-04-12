@@ -36,7 +36,7 @@ html,body{
 #nav{position:fixed;top:0;left:0;right:0;z-index:200;height:54px;display:flex;align-items:center;justify-content:center;background:rgba(2,8,20,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);box-shadow:0 8px 40px rgba(0,0,0,.22)}
 .nav-logo{position:absolute;left:1.5rem;font-size:18px;font-weight:900;letter-spacing:.06em}
 .nav-links{display:flex;gap:.1rem;flex-wrap:wrap;justify-content:center}
-.nb{background:none;border:1px solid transparent;color:var(--muted);font-family:'Rubik',sans-serif;font-size:11.5px;cursor:pointer;padding:4px 10px;border-radius:20px;transition:all .3s;white-space:nowrap}
+.nb{background:none;border:1px solid transparent;color:var(--muted);font-family:'Rubik',sans-serif;font-size:14.5px;cursor:pointer;padding:6px 14px;border-radius:20px;transition:all .3s;white-space:nowrap}
 .nb:hover{color:var(--text);background:rgba(255,255,255,.06)}
 .nb.active{color:var(--text);background:rgba(34,211,238,.14);border-color:rgba(34,211,238,.45)}
 
@@ -246,18 +246,18 @@ html,body{
 ════════════════════════════ */
 .concept-wrap{max-width:800px;width:90%;z-index:2;text-align:center}
 .concept-en{font-size:clamp(2.2rem,5vw,4.5rem);margin-bottom:2.8rem}
-.concept-he{font-size:clamp(1.05rem,1.9vw,1.45rem);font-weight:300;line-height:2;color:rgba(255,255,255,.85);direction:rtl}
+.concept-he{font-size:clamp(1.15rem,2.1vw,1.6rem);font-weight:300;line-height:2;color:rgba(255,255,255,.85);direction:rtl}
 .concept-he strong{color:var(--blue);font-weight:400}
 
 /* ════════════════════════════
    SLIDE 3 — INFO
 ════════════════════════════ */
 .info-center{z-index:2;text-align:center}
-.info-title-lbl{font-size:13px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;margin-bottom:3rem;font-weight:400;font-family:'Rubik',sans-serif}
-.ir{display:flex;align-items:center;justify-content:space-between;gap:2.5rem;padding:1.2rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.info-title-lbl{font-size:14px;letter-spacing:.35em;color:var(--blue);text-transform:uppercase;margin-bottom:3rem;font-weight:400;font-family:'Rubik',sans-serif}
+.ir{display:flex;align-items:center;justify-content:space-between;gap:3rem;padding:1.6rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
 .ir:last-child{border:none}
-.ir-lbl{font-size:11px;letter-spacing:.25em;color:var(--blue);text-transform:uppercase;flex-shrink:0;min-width:65px;text-align:right}
-.ir-val{font-size:clamp(1.3rem,2.5vw,2rem);font-weight:700;text-align:left;flex:1}
+.ir-lbl{font-size:13px;letter-spacing:.22em;color:var(--blue);text-transform:uppercase;flex-shrink:0;min-width:80px;text-align:right}
+.ir-val{font-size:clamp(2rem,4.5vw,3.6rem);font-weight:700;text-align:left;flex:1;line-height:1.1}
 
 /* ════════════════════════════
    GALLERY SLIDES
@@ -267,13 +267,16 @@ html,body{
 .gallery-num{font-size:10px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;margin-bottom:.4rem}
 .gallery-title{font-size:clamp(2.8rem,5.8vw,5rem);font-weight:900;font-family:'Rubik',sans-serif;color:#fff}
 .gallery-track-wrap{flex:1;overflow:hidden;position:relative;min-height:0}
-.gallery-track{display:flex;height:100%;width:100%;transition:transform .9s cubic-bezier(.77,0,.18,1);will-change:transform}
-.gallery-page{min-width:100%;height:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
-.gallery-page img{width:100%;height:100%;object-fit:cover;filter:brightness(.92);transition:filter .35s ease;display:block;background:#10131a}
-.gallery-page img:hover{filter:brightness(1.03)}
+.gallery-track{height:100%;will-change:transform}
+.gallery-track img{transition:filter .3s}
+.gallery-track img:hover{filter:brightness(1.05)}
+.gal-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:1px solid rgba(18,184,255,.35);color:var(--blue);width:42px;height:42px;border-radius:50%;font-size:1.3rem;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);transition:background .2s,border-color .2s}
+.gal-btn:hover{background:rgba(18,184,255,.2);border-color:var(--blue)}
+.gal-btn.prev{right:14px}
+.gal-btn.next{left:14px}
 .gallery-dots{position:absolute;bottom:.9rem;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:5}
 .gdot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .3s}
-.gdot.active{background:var(--blue);box-shadow:0 0 8px var(--blueGlow)}
+.gdot.active{background:var(--blue);box-shadow:0 0 8px var(--blueGlow);transform:scale(1.4)}
 
 /* ════════════════════════════
    LOOK & FEEL LAYOUT
@@ -284,7 +287,7 @@ html,body{
 .lf-right.single{justify-content:center}
 .lf-tag{font-size:12px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;margin-bottom:1rem;font-family:'Rubik',sans-serif;font-weight:500}
 .lf-h{font-size:clamp(2.2rem,3.8vw,3.4rem);font-weight:900;margin-bottom:1.4rem;line-height:1.08;font-family:'Rubik',sans-serif;color:#fff}
-.lf-body{font-size:clamp(.95rem,1.5vw,1.15rem);font-weight:300;line-height:1.9;color:rgba(255,255,255,.83);direction:rtl}
+.lf-body{font-size:clamp(1.05rem,1.6vw,1.25rem);font-weight:300;line-height:1.9;color:rgba(255,255,255,.83);direction:rtl}
 .lf-body ul{list-style:none;margin-top:.7rem}
 .lf-body ul li{padding:.25rem 0;padding-right:1.1rem;position:relative}
 .lf-body ul li::before{content:'·';position:absolute;right:0;color:var(--blue)}
@@ -323,7 +326,7 @@ html,body{
 .fd-items{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(255,255,255,.07)}
 .fd-item{display:flex;align-items:center;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.07)}
 .fd-dot{width:5px;height:5px;border-radius:50%;background:var(--blue);box-shadow:0 0 8px var(--blueGlow);flex-shrink:0}
-.fd-item span{font-size:clamp(1rem,1.8vw,1.3rem);font-weight:300}
+.fd-item span{font-size:clamp(1.1rem,2vw,1.5rem);font-weight:300}
 
 /* ════════════════════════════
    HOSTS
@@ -337,7 +340,7 @@ html,body{
 .host-card:hover .host-img-wrap img{filter:grayscale(0%) brightness(1)}
 .host-img-wrap::before{content:'';position:absolute;inset:0;border-radius:50%;border:1px solid rgba(34,211,238,.25);animation:ringPulse 2s ease-in-out infinite}
 @keyframes ringPulse{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.06);opacity:1}}
-.host-name{font-size:clamp(1rem,1.6vw,1.2rem);font-weight:700;text-align:center;font-family:'Rubik',sans-serif}
+.host-name{font-size:clamp(1.1rem,1.8vw,1.4rem);font-weight:700;text-align:center;font-family:'Rubik',sans-serif}
 
 /* ════════════════════════════
    ITEM SLIDES (video + text)
@@ -347,7 +350,7 @@ html,body{
 .item-right{width:min(50%,520px);flex-shrink:0}
 .item-num{font-size:12px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;margin-bottom:.8rem;font-family:'Rubik',sans-serif;font-weight:500}
 .item-title{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:900;margin-bottom:1.3rem;line-height:1.08;font-family:'Rubik',sans-serif;color:#fff}
-.item-body{font-size:clamp(.9rem,1.4vw,1.1rem);font-weight:300;line-height:1.9;color:rgba(255,255,255,.83);direction:rtl}
+.item-body{font-size:clamp(1.05rem,1.5vw,1.2rem);font-weight:300;line-height:1.9;color:rgba(255,255,255,.83);direction:rtl}
 .video-card{position:relative;display:block;width:100%;aspect-ratio:16/9;border:1px solid rgba(34,211,238,.2);overflow:hidden;background:#05070a;text-decoration:none;color:#fff}
 .video-card .brk.tl{top:0;right:0}.video-card .brk.tr{top:0;left:0}.video-card .brk.bl{bottom:0;right:0}.video-card .brk.br{bottom:0;left:0}
 .video-card img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.58);transition:transform .45s ease,filter .45s ease}
@@ -407,7 +410,7 @@ html,body{
 .more-list{border-top:1px solid rgba(255,255,255,.07)}
 .mi{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 0;border-bottom:1px solid rgba(255,255,255,.06);transition:padding .2s;cursor:default}
 .mi:hover{padding-right:1rem}
-.mi span{font-size:clamp(.95rem,1.7vw,1.3rem);font-weight:300}
+.mi span{font-size:clamp(1.1rem,1.9vw,1.5rem);font-weight:300}
 .mi-arr{color:var(--blue);opacity:0;transition:opacity .2s;font-size:1.1rem}
 .mi:hover .mi-arr{opacity:1}
 
@@ -1814,6 +1817,11 @@ var v0=Object.defineProperty;var k0=(l,h,b)=>h in l?v0(l,h,{enumerable:!0,config
 `;class N{constructor({initialState:t,onSetState:e,language:C,settingsManagerUi:i,getUpdatedState:a}){s(this,"state",g.Finish);s(this,"onSetState");s(this,"steps");s(this,"maxSteps",4);s(this,"html");s(this,"styles");s(this,"settingsManagerUi");s(this,"articleBlock",null);s(this,"getUpdatedState");s(this,"restartListener",async()=>{const t=this.settingsManagerUi.howItWorksButton;t&&(t.classList.remove(h),t.addEventListener("click",()=>{var e;(e=this.settingsManagerUi.settingsManagerMenu)==null||e.classList.remove(l),this.inject(),t.classList.add(h)}))});s(this,"resetIsDotMode",(t=!1)=>{var i;const{isDotModEnabled:e}=this.getUpdatedState();if(!e)return;const C=this.state===g.Finish||t;(i=this.settingsManagerUi.toggleButton)==null||i.classList.toggle(m,C)});s(this,"disableCheckboxes",()=>{var e;const t=(e=this.settingsManagerUi.settingsPage)==null?void 0:e.querySelectorAll('input[type="checkbox"]');t&&t.forEach(C=>{C.disabled=!0})});s(this,"activeCheckboxes",()=>{var e;const t=(e=this.settingsManagerUi.settingsPage)==null?void 0:e.querySelectorAll('input[type="checkbox"]');t&&t.forEach(C=>{C.disabled=!1})});this.state=t,this.onSetState=e,this.settingsManagerUi=i,this.getUpdatedState=a,this.steps=C2[C].steps,this.html=v("div",{html:u0(C2[C].base),classList:["onboardingWrapper"]}),this.styles=v("style",{html:b0+f0}),this.articleBlock=this.html.querySelector(`#${V}`),this.start()}dispatchOnboarding({start:t}){var C;const e=new CustomEvent("onboarding",{detail:{start:t}});(C=this.settingsManagerUi.wrapper)==null||C.dispatchEvent(e)}static createInstance(t){const{initialState:e}=t;if(e!==g.Empty&&e!==g.First)return;const C=new N(t);if(e===g.Empty){C.inject();return}C.restartListener()}inject(){var t;this.articleBlock&&this.articleBlock.classList.add(b),this.settingsManagerUi.toggleButtonWrapper.classList.add(b),this.setState(g.First),this.updateUI(),(t=this.settingsManagerUi.wrapper)==null||t.append(this.styles,this.html),this.dispatchOnboarding({start:!0})}start(){const t=this.html.querySelector(`#${O}`),e=this.html.querySelector(`#${T}`);t.addEventListener("click",()=>{var C,i;if((C=this.settingsManagerUi.settingsManagerMenu)==null||C.classList.add(l),this.setState(`${Number(this.state)+1}`),this.updateUI(),Number(this.state)===this.maxSteps){const a=(i=this.steps[this.maxSteps-1])==null?void 0:i.button;a&&(t.textContent=a)}}),e.addEventListener("click",()=>{this.restartListener(),this.destroy(),this.resetIsDotMode(!0)})}setState(t){var C,i;const e=Number(t)>this.maxSteps;if(t===g.Four&&((i=(C=this.settingsManagerUi.wrapper)==null?void 0:C.querySelector(`#${T}`))==null||i.classList.add("disable")),this.onSetState(t,e),e){this.destroy(),this.state=g.Finish;return}this.state=t}async updateUI(){this.updateStepContent(),this.modifyClasses(),this.handlePageStates(),this.resetIsDotMode()}updateStepContent(){const t=this.steps.find(a=>a.id===this.state);if(!t)return;const e=this.html.querySelector(`#${G}`),C=this.html.querySelector(`#${Q}`),i=this.html.querySelector(`#${X}`);C.textContent=t.step,e.textContent=t.title,i.innerHTML=t.description}modifyClasses(){var i,a;const t=(i=this.settingsManagerUi.wrapper)==null?void 0:i.classList,e=(a=this.html.querySelector(`#${V}`))==null?void 0:a.classList;if(!t||!e)return;this.clearModifierClasses(t),this.clearModifierClasses(e);const C=z+this.state;t.add(C),e.add(C)}clearModifierClasses(t){this.filterModifierClasses(t).forEach(e=>t.remove(e))}filterModifierClasses(t){return Array.from(t).filter(e=>e.startsWith(z))}handlePageStates(){const{mainPage:t,settingsPage:e,toggleButtonWrapper:C}=this.settingsManagerUi;switch(this.state){case g.First:this.articleBlock.classList.remove(b),C.classList.remove(b);break;case g.Third:t==null||t.classList.add(l);break;case g.Four:this.disableCheckboxes(),t==null||t.classList.remove(B),e==null||e.classList.add(w);break;case g.Finish:this.activeCheckboxes();break}}destroy(){this.dispatchOnboarding({start:!1}),this.html.remove(),this.styles.remove();const{wrapper:t,mainPage:e,settingsPage:C,settingsManagerMenu:i}=this.settingsManagerUi;t&&[...t.classList].filter(a=>a.startsWith(z)).forEach(a=>t.classList.remove(a)),[e,C,i].forEach(a=>{a==null||a.classList.remove(l)}),C==null||C.classList.remove(w)}}class g2 extends HTMLElement{constructor(){super();s(this,"ui");s(this,"state");s(this,"listeners");s(this,"getUpdatedState",()=>this.state);s(this,"domContentLoadHandler",async()=>{var e;await this.getDomainDataAndUpdateState(),!(this.state.isDomainDontShow||!this.state.isManagerEnabled)&&(P2(),this.style=e0,this.listeners.initializeToggleButtonListeners(),this.updateUIFromState(),this.startOnboarding(),(e=this.listeners.dragAndDrop)==null||e.checkConstraints(),this.ui.toggleButton.style.opacity="1")});s(this,"calculateBlockedAds",e=>e>999e6?"999M":e<1e3?`${e}`:e<1e6?`${Math.ceil(e/1e3)}K`:`${Math.ceil(e/1e6)}M`);s(this,"updateUIFromState",()=>{var e,C;this.ui.toggleEnabled.checked=!this.state.isWhitelistedDomains,this.ui.toggleLockPosition.checked=this.state.isPositionLock,this.ui.reportAdsButton.disabled=this.state.isDomainReported,this.ui.totalBlockedAds.textContent=`${this.state.totalBlockedAds}`,this.ui.toggleButtonBlockedAdsCounter.textContent=this.calculateBlockedAds(this.state.totalBlockedAds),this.ui.toggleReduceSize.checked=this.state.isDotModEnabled,this.state.isDotModEnabled||((e=this.ui.settingsManagerDotElement)==null||e.classList.add(h),(C=this.ui.toggleButton)==null||C.classList.remove(m)),this.ui.toggleButton.classList.toggle(l,!this.state.isWhitelistedDomains)});this.state=new W2,this.ui=new m0(this,this.state),this.listeners=new Z2(this.ui,this.state,this.getUpdatedState),this.execWhenDomReady(this.domContentLoadHandler)}execWhenDomReady(e){document.readyState==="loading"?document.addEventListener("DOMContentLoaded",e):e()}async getDomainDataAndUpdateState(){try{const e=await M.getDomainData(this.state.hostname),{customPosition:{x:C,y:i},isDomainReported:a,isWhitelistedDomains:r,totalBlockedAds:o,isDotModEnabled:d}=e,u={...e,isDomainReported:a,isWhitelistedDomains:r,totalBlockedAds:o,isDotModEnabled:d,customPosition:{x:C===1?c.left:c.right,y:i}};this.state.update(u)}catch(e){console.log("Error get domain data",e)}}startOnboarding(){const e=async(C,i)=>{C!==g.First&&!i||((C===g.Empty||C===g.First)&&await this.listeners.resetPositionCallback(),this.state.update({onboardingStep:i?g.Finish:C}),S(this.state).catch(console.error))};N.createInstance({initialState:this.state.onboardingStep,onSetState:e,language:this.state.language,settingsManagerUi:this.ui,getUpdatedState:this.getUpdatedState})}}const q="wait-a360-companion-status",x0="send-a360-companion-status",_0=()=>new Promise(n=>{const t=()=>{clearTimeout(e),window.removeEventListener(q,t),n(!0)};window.addEventListener(q,t),window.dispatchEvent(new CustomEvent(x0));const e=setTimeout(()=>{window.removeEventListener(q,t),n(!1)},100)});async function w0(){var t;await _0()||(customElements.define(j,g2),document.body.appendChild(new g2),(t=document.querySelector(`#${y2}`))==null||t.remove())}w0().catch(n=>console.error("Manager initialization error:",n))})();
 
 })();</script>
+
+<div class="slide-nav" style="top:calc(50vh - 58px)">
+  <button class="slide-nav-btn" id="snav-up" onclick="navSlide(-1)" title="שקף קודם" style="position:relative;top:0">▲</button>
+  <button class="slide-nav-btn" id="snav-dn" onclick="navSlide(1)"  title="שקף הבא"  style="position:relative;top:0">▼</button>
+</div>
 <canvas id="particles"></canvas>
 <div id="prog"></div>
 
@@ -1903,7 +1911,7 @@ var v0=Object.defineProperty;var k0=(l,h,b)=>h in l?v0(l,h,{enumerable:!0,config
   <div class="gframe" style="inset:5%"></div><div class="gframe p" style="inset:7%"></div>
   <div class="info-center ain" style="z-index:2">
     <div class="info-title-lbl">פרטי האירוע</div>
-    <div style="min-width:min(60vw,500px)">
+    <div style="min-width:min(70vw,650px)">
       <div class="ir"><span class="ir-lbl">מתי</span><span class="ir-val">נובמבר 2026</span></div>
       <div class="ir"><span class="ir-lbl">איפה</span><span class="ir-val">האנגר 11 / אקספו ביתן 1</span></div>
       <div class="ir"><span class="ir-lbl">כמה</span><span class="ir-val">1,000 איש</span></div>
@@ -1918,20 +1926,18 @@ var v0=Object.defineProperty;var k0=(l,h,b)=>h in l?v0(l,h,{enumerable:!0,config
     <div style="color:var(--muted);font-size:13px">תל אביב · 1,000 איש</div>
   </div>
   <div class="gallery-track-wrap" style="z-index:2">
-    
+    <button class="gal-btn prev" onclick="galPrev('g1')">&#8250;</button>
+    <button class="gal-btn next" onclick="galNext('g1')">&#8249;</button>
 <div class="gallery-track" id="g1track">
-      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfmm3NF95yR0lowu0dCvR4k23mBFNdL1Cpg&s" alt="האנגר 11" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8oGVPJMhc-5ylakr9h4ro76WyAO7F1EVkjw&s" alt="האנגר 11" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://hangar11.co.il/events/wp-content/uploads/2016/11/10945684_830005020379231_2016055129184767452_o.jpg" alt="האנגר 11" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2025/12/shviro-photos-278-scaled.jpg" alt="האנגר 11" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2025/12/shviro-photos-462-scaled.jpg" alt="האנגר 11" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/11/14-Foltyn-2024_11_09-Zohar-Revivo-044-scaled.jpg" alt="האנגר 11" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/11/13-Foltyn-2024_11_09-Zohar-Revivo-034-scaled.jpg" alt="האנגר 11" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/11/Foltyn-2024_11_09-Zohar-Revivo-107-scaled.jpg" alt="האנגר 11" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfmm3NF95yR0lowu0dCvR4k23mBFNdL1Cpg&s" alt="האנגר 11" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8oGVPJMhc-5ylakr9h4ro76WyAO7F1EVkjw&s" alt="האנגר 11" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://hangar11.co.il/events/wp-content/uploads/2016/11/10945684_830005020379231_2016055129184767452_o.jpg" alt="האנגר 11" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2025/12/shviro-photos-278-scaled.jpg" alt="האנגר 11" crossorigin="anonymous">
+      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfmm3NF95yR0lowu0dCvR4k23mBFNdL1Cpg&s" alt="האנגר 11">
+      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8oGVPJMhc-5ylakr9h4ro76WyAO7F1EVkjw&s" alt="האנגר 11">
+      <img referrerpolicy="no-referrer" src="https://static.tickchak.co.il/images/live/more/eventNew.jpg" alt="האנגר 11">
+      <img referrerpolicy="no-referrer" src="https://hangar11.co.il/events/wp-content/uploads/2016/11/10945684_830005020379231_2016055129184767452_o.jpg" alt="האנגר 11">
+      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2025/12/shviro-photos-278-scaled.jpg" alt="האנגר 11">
+      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2025/12/shviro-photos-462-scaled.jpg" alt="האנגר 11">
+      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/11/14-Foltyn-2024_11_09-Zohar-Revivo-044-scaled.jpg" alt="האנגר 11">
+      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/11/13-Foltyn-2024_11_09-Zohar-Revivo-034-scaled.jpg" alt="האנגר 11">
+      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/11/Foltyn-2024_11_09-Zohar-Revivo-107-scaled.jpg" alt="האנגר 11">
     </div>
     <div class="gallery-dots" id="g1dots"></div>
   </div>
@@ -1944,16 +1950,15 @@ var v0=Object.defineProperty;var k0=(l,h,b)=>h in l?v0(l,h,{enumerable:!0,config
     <div style="color:var(--muted);font-size:13px">תל אביב</div>
   </div>
   <div class="gallery-track-wrap" style="z-index:2">
-    
+    <button class="gal-btn prev" onclick="galPrev('g2')">&#8250;</button>
+    <button class="gal-btn next" onclick="galNext('g2')">&#8249;</button>
 <div class="gallery-track" id="g2track">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/01/Tomer-Foltyn-2022_11_29-Mobileye-IPO-0387-1536x1024.jpg" alt="אקספו" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://expotelaviv.co.il/wp-content/uploads/2024/02/%D7%90%D7%99%D7%A8%D7%95%D7%95%D7%95%D7%99%D7%96%D7%99%D7%95%D7%9F-2019-1-scaled.jpeg" alt="אקספו" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://expotelaviv.co.il/wp-content/uploads/2022/06/IMG-20190327-WA0004-scaled.jpg" alt="אקספו" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQObiJkYTgyw5JM9MFhxgFwymgm0ZVHoNaDmA&s" alt="אקספו" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtan4D-9puwvQfj1ywh5_65f_atki4YcqVVg&s" alt="אקספו" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/01/Tomer-Foltyn-2022_11_29-Mobileye-IPO-0387-1536x1024.jpg" alt="אקספו" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://expotelaviv.co.il/wp-content/uploads/2024/02/%D7%90%D7%99%D7%A8%D7%95%D7%95%D7%95%D7%99%D7%96%D7%99%D7%95%D7%9F-2019-1-scaled.jpeg" alt="אקספו" crossorigin="anonymous">
-      <img referrerpolicy="no-referrer" src="https://expotelaviv.co.il/wp-content/uploads/2022/06/IMG-20190327-WA0004-scaled.jpg" alt="אקספו" crossorigin="anonymous">
+      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/01/Tomer-Foltyn-2022_11_29-Mobileye-IPO-0387-1536x1024.jpg" alt="אקספו">
+      <img referrerpolicy="no-referrer" src="https://static.tickchak.co.il/images/live/more/venueImage.webp" alt="אקספו">
+      <img referrerpolicy="no-referrer" src="https://expotelaviv.co.il/wp-content/uploads/2024/02/%D7%90%D7%99%D7%A8%D7%95%D7%95%D7%95%D7%99%D7%96%D7%99%D7%95%D7%9F-2019-1-scaled.jpeg" alt="אקספו">
+      <img referrerpolicy="no-referrer" src="https://expotelaviv.co.il/wp-content/uploads/2022/06/IMG-20190327-WA0004-scaled.jpg" alt="אקספו">
+      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQObiJkYTgyw5JM9MFhxgFwymgm0ZVHoNaDmA&s" alt="אקספו">
+      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtan4D-9puwvQfj1ywh5_65f_atki4YcqVVg&s" alt="אקספו">
     </div>
     <div class="gallery-dots" id="g2dots"></div>
   </div>
@@ -2407,108 +2412,138 @@ function updateUI(){
 }
 slidesEl.addEventListener('scroll',updateUI,{passive:true});
 
-// ─── GALLERY (paged, 3-visible, smooth loop) ───
-function initGallery(trackId, dotsId){
-  const track = document.getElementById(trackId);
-  const dotsWrap = document.getElementById(dotsId);
-  if(!track || !dotsWrap)return;
+// ─── GALLERY — pure CSS % widths, infinite loop ───
+// Each image is 33.333% wide (CSS). Track slides by multiples of 33.333%.
+// We clone 3 images before and after for seamless infinite loop.
 
-  const originalImgs = Array.from(track.querySelectorAll('img')).map(img=>img.cloneNode(true));
-  const perPage = 3;
-  const pages = [];
-  for(let i=0;i<originalImgs.length;i+=perPage){
-    pages.push(originalImgs.slice(i, i + perPage));
-  }
-  if(!pages.length)return;
+const galState = {};
 
-  track.innerHTML='';
-  pages.forEach(group=>{
-    const page=document.createElement('div');
-    page.className='gallery-page';
-    group.forEach(img=>page.appendChild(img));
-    track.appendChild(page);
+function galInit(prefix){
+  const track    = document.getElementById(prefix+'track');
+  const dotsWrap = document.getElementById(prefix+'dots');
+  if(!track) return;
+
+  const orig = Array.from(track.querySelectorAll('img'));
+  const n = orig.length;
+  if(n === 0) return;
+
+  // Clone last 3 → prepend, clone first 3 → append
+  const CLONE = Math.min(3, n);
+  orig.slice(-CLONE).reverse().forEach(img => track.insertBefore(img.cloneNode(true), track.firstChild));
+  orig.slice(0, CLONE).forEach(img => track.appendChild(img.cloneNode(true)));
+
+  // Now set CSS: track is a flex row, each img = 100%/3 of the TRACK-WRAP (container)
+  // We achieve this by setting track width and image width in CSS via style
+  // track width = totalImgs * (100/3)% of container
+  const allImgs = track.querySelectorAll('img');
+  const total = allImgs.length;
+
+  // Set each image to exactly 33.333% of the container (track-wrap)
+  // by making track width = total * 33.333% of container, img = 1/total of track = 33.333% of container
+  track.style.display = 'flex';
+  track.style.height = '100%';
+  // Each img: width = 100%/total of track, but we want 1/3 of container
+  // So track width = total/3 * 100% of container
+  // img width = 100/total % of track = (100/total)% -> actually = 1/3 of container ✓
+
+  allImgs.forEach(img => {
+    img.style.flexShrink = '0';
+    img.style.width = (100 / total) + '%';  // % of track
+    img.style.height = '100%';
+    img.style.objectFit = 'cover';
+    img.style.objectPosition = 'center';
+    img.style.display = 'block';
+    img.style.background = '#10131a';
+    img.style.filter = 'brightness(.88)';
   });
+  // Track needs explicit width so that img % works relative to container
+  // Use inline-flex trick: set track width = total/3 * 100% of container
+  track.style.width = (total / 3 * 100) + '%';
 
-  const firstClone = track.firstElementChild.cloneNode(true);
-  track.appendChild(firstClone);
-  bindImageFallbacks(track);
+  let cur = CLONE; // start showing the original images
+  let busy = false;
 
-  let cur = 0;
-  let isResetting = false;
-
-  function setPos(animate=true){
-    track.style.transition = animate ? 'transform .9s cubic-bezier(.77,0,.18,1)' : 'none';
-    track.style.transform = `translateX(-${cur * 100}%)`;
+  // Shift by 1 image = 1/total of track width = 100/total %
+  function setPos(animate) {
+    track.style.transition = animate ? 'transform .75s cubic-bezier(.77,0,.18,1)' : 'none';
+    // shift = -cur * (1/total of track) = -cur * (100/total) %
+    track.style.transform = `translateX(-${cur * 100 / total}%)`;
   }
 
-  function updateDots(index = cur % pages.length){
-    dotsWrap.querySelectorAll('.gdot').forEach((d,i)=>d.classList.toggle('active', i===index));
+  function dotIdx() { return ((cur - CLONE) % n + n) % n; }
+
+  function updateDots() {
+    if(!dotsWrap) return;
+    const di = dotIdx();
+    dotsWrap.querySelectorAll('.gdot').forEach((d,i) => d.classList.toggle('active', i === di));
   }
 
-  dotsWrap.innerHTML='';
-  pages.forEach((_,i)=>{
-    const d=document.createElement('div');
-    d.className='gdot'+(i===0?' active':'');
-    d.addEventListener('click',()=>{
-      cur=i;
-      isResetting=false;
-      setPos(true);
-      updateDots(i);
-      restart();
-    });
-    dotsWrap.appendChild(d);
-  });
-
-  function next(){
-    if(isResetting)return;
-    cur += 1;
-    setPos(true);
-    updateDots(cur % pages.length);
-  }
-
-  track.addEventListener('transitionend',()=>{
-    if(cur === pages.length){
-      isResetting = true;
-      cur = 0;
-      setPos(false);
-      track.offsetHeight;
-      isResetting = false;
+  // Build dots
+  if(dotsWrap) {
+    dotsWrap.innerHTML = '';
+    for(let i = 0; i < n; i++) {
+      const d = document.createElement('div');
+      d.className = 'gdot' + (i===0?' active':'');
+      const idx = i;
+      d.addEventListener('click', () => {
+        if(!busy) { cur = CLONE + idx; setPos(true); updateDots(); resetTimer(); }
+      });
+      dotsWrap.appendChild(d);
     }
-  });
-
-  let timer;
-  function restart(){
-    clearInterval(timer);
-    timer = setInterval(next, 3200);
   }
 
-  track.parentElement.addEventListener('mouseenter',()=>clearInterval(timer));
-  track.parentElement.addEventListener('mouseleave',restart);
-  window.addEventListener('resize',()=>setPos(false));
+  // Infinite loop: after transition, if we're past boundaries jump silently
+  track.addEventListener('transitionend', () => {
+    let jumped = false;
+    if(cur >= CLONE + n) { cur -= n; jumped = true; }
+    else if(cur < CLONE) { cur += n; jumped = true; }
+    if(jumped) {
+      track.style.transition = 'none';
+      track.style.transform = `translateX(-${cur * 100 / total}%)`;
+      track.offsetHeight; // force reflow
+    }
+    updateDots();
+    busy = false;
+  });
+
+  let autoTimer;
+  function autoNext() { if(!busy) { busy = true; cur++; setPos(true); updateDots(); } }
+  function resetTimer() { clearInterval(autoTimer); autoTimer = setInterval(autoNext, 3200); }
+
+  track.parentElement.addEventListener('mouseenter', () => clearInterval(autoTimer));
+  track.parentElement.addEventListener('mouseleave', resetTimer);
+
+  galState[prefix] = {
+    go: (dir) => { if(!busy) { busy = true; cur += dir; setPos(true); updateDots(); } }
+  };
 
   setPos(false);
-  restart();
+  bindImageFallbacks(track);
+  resetTimer();
 }
 
-// booth rotating gallery (single visible, auto)
+function galNext(prefix) { galState[prefix]?.go(1); }
+function galPrev(prefix) { galState[prefix]?.go(-1); }
+
+// Booth single-image rotating gallery
 function initBoothGallery(trackId){
   const track = document.getElementById(trackId);
-  if(!track)return;
+  if(!track) return;
   const imgs = track.querySelectorAll('img');
   const n = imgs.length;
-  let cur=0;
-  function go(){
-    track.style.transition='transform .7s ease';
-    track.style.transform=`translateX(${-cur*100}%)`;
+  let cur = 0;
+  function go() {
+    track.style.transition = 'transform .7s ease';
+    track.style.transform = `translateX(${-cur * 100}%)`;
   }
-  setInterval(()=>{cur=(cur+1)%n;go()},2800);
+  setInterval(() => { cur = (cur+1) % n; go(); }, 2800);
 }
 
 bindImageFallbacks(document);
 
 setTimeout(()=>{
-  initGallery('g1track','g1dots');
-  initGallery('g2track','g2dots');
+  galInit('g1');
+  galInit('g2');
   initBoothGallery('boothtrack');
 },200);
 
@@ -2536,6 +2571,17 @@ function drawP(){
 }
 drawP();
 setTimeout(updateUI,300);
+
+// ── SLIDE NAV BUTTONS ──
+function navSlide(dir){
+  const SIDS=['s0','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14','s15','s16','s17','s18','s19','s20','s21'];
+  const slidesEl=document.getElementById('slides');
+  const st=slidesEl.scrollTop;
+  let cur=0;
+  SIDS.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.offsetTop-80<=st)cur=i;});
+  const next=Math.max(0,Math.min(SIDS.length-1,cur+dir));
+  document.getElementById(SIDS[next])?.scrollIntoView({behavior:'smooth'});
+}
 </script>
 </body>
 </html>
