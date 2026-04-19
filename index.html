@@ -262,6 +262,17 @@ html,body{
 /* ════════════════════════════
    GALLERY SLIDES
 ════════════════════════════ */
+
+/* ── Static 3-image strip ── */
+.loc-slide{flex-direction:column;justify-content:flex-start;align-items:stretch;padding:0;gap:0}
+.loc-top{padding:2.5rem 6% 2rem;display:flex;align-items:flex-end;justify-content:space-between;flex-shrink:0;z-index:2}
+.loc-num{font-size:10px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;margin-bottom:.5rem}
+.loc-title{font-size:clamp(2.8rem,6vw,5.5rem);font-weight:900;line-height:1;font-family:'Rubik',sans-serif;color:#fff}
+.loc-sub{color:var(--muted);font-size:13px;text-align:right}
+.loc-strip{display:flex;flex:1;gap:4px;overflow:hidden;min-height:0}
+.loc-strip img{flex:1;min-width:0;height:100%;object-fit:cover;object-position:center;filter:brightness(.82);transition:filter .4s,flex .5s}
+.loc-strip img:hover{filter:brightness(1.05);flex:1.6}
+
 .gallery-slide{flex-direction:column;justify-content:stretch;align-items:stretch;gap:0}
 .gallery-top{padding:2.5rem 5% 1.5rem;display:flex;align-items:flex-end;justify-content:space-between;flex-shrink:0;z-index:2;background:linear-gradient(180deg,rgba(2,8,20,.55),rgba(2,8,20,0));backdrop-filter:blur(6px)}
 .gallery-num{font-size:10px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;margin-bottom:.4rem}
@@ -333,9 +344,9 @@ html,body{
 ════════════════════════════ */
 .hosts-wrap{max-width:1100px;width:92%;z-index:2;text-align:center}
 .hosts-title{font-size:clamp(3rem,5.6vw,5rem);font-weight:900;margin-bottom:3rem;font-family:'Rubik',sans-serif}
-.hosts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem 3rem}
+.hosts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem 3.5rem;justify-items:center}
 .host-card{display:flex;flex-direction:column;align-items:center;gap:1rem;cursor:default}
-.host-img-wrap{width:min(20vw,200px);height:min(20vw,200px);border-radius:50%;overflow:hidden;position:relative;border:1px solid rgba(18,184,255,.4);box-shadow:0 0 28px rgba(18,184,255,.18),0 0 60px rgba(18,184,255,.08)}
+.host-img-wrap{width:min(16vw,170px);height:min(16vw,170px);border-radius:50%;overflow:hidden;position:relative;border:1px solid rgba(18,184,255,.4);box-shadow:0 0 28px rgba(18,184,255,.18),0 0 60px rgba(18,184,255,.08)}
 .host-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(100%) brightness(.88);transition:filter .5s ease}
 .host-card:hover .host-img-wrap img{filter:grayscale(0%) brightness(1)}
 .host-img-wrap::before{content:'';position:absolute;inset:0;border-radius:50%;border:1px solid rgba(34,211,238,.25);animation:ringPulse 2s ease-in-out infinite}
@@ -1833,18 +1844,19 @@ var v0=Object.defineProperty;var k0=(l,h,b)=>h in l?v0(l,h,{enumerable:!0,config
     <button class="nb" onclick="goTo(2)">קונספט</button>
     <button class="nb" onclick="goTo(3)">INFO</button>
     <button class="nb" onclick="goTo(4)">האנגר 11</button>
-    <button class="nb" onclick="goTo(5)">אקספו</button>
-    <button class="nb" onclick="goTo(6)">כניסה לאולם</button>
-    <button class="nb" onclick="goTo(7)">כניסה</button>
-    <button class="nb" onclick="goTo(8)">אולם</button>
-    <button class="nb" onclick="goTo(9)">בר</button>
-    <button class="nb" onclick="goTo(10)">אוכל</button>
-    <button class="nb" onclick="goTo(11)">הנחיה</button>
-    <button class="nb" onclick="goTo(12)">במה</button>
-    <button class="nb" onclick="goTo(17)">LIVE</button>
-    <button class="nb" onclick="goTo(18)">עמדות</button>
-    <button class="nb" onclick="goTo(19)">עוד</button>
-    <button class="nb" onclick="goTo(20)">סיום</button>
+    <button class="nb" onclick="goTo(5)">LAGO</button>
+    <button class="nb" onclick="goTo(6)">חוות רונית</button>
+    <button class="nb" onclick="goTo(7)">כניסה לאולם</button>
+    <button class="nb" onclick="goTo(8)">כניסה</button>
+    <button class="nb" onclick="goTo(9)">אולם</button>
+    <button class="nb" onclick="goTo(10)">בר</button>
+    <button class="nb" onclick="goTo(11)">אוכל</button>
+    <button class="nb" onclick="goTo(12)">הנחיה</button>
+    <button class="nb" onclick="goTo(13)">במה</button>
+    <button class="nb" onclick="goTo(18)">LIVE</button>
+    <button class="nb" onclick="goTo(19)">עמדות</button>
+    <button class="nb" onclick="goTo(20)">עוד</button>
+    <button class="nb" onclick="goTo(21)">סיום</button>
   </div>
 </nav>
 
@@ -1920,47 +1932,53 @@ var v0=Object.defineProperty;var k0=(l,h,b)=>h in l?v0(l,h,{enumerable:!0,config
 </section>
 
 <!-- ══ S4: HANGAR 11 ══ -->
-<section class="slide gallery-slide" id="s4">
-  <div class="gallery-top" style="z-index:2">
-    <div><div class="gallery-num">LOCATION #1</div><div class="gallery-title ain">האנגר 11</div></div>
-    <div style="color:var(--muted);font-size:13px">תל אביב · 1,000 איש</div>
-  </div>
-  <div class="gallery-track-wrap" style="z-index:2">
-    <button class="gal-btn prev" onclick="galPrev('g1')">&#8250;</button>
-    <button class="gal-btn next" onclick="galNext('g1')">&#8249;</button>
-<div class="gallery-track" id="g1track">
-      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsfmm3NF95yR0lowu0dCvR4k23mBFNdL1Cpg&s" alt="האנגר 11">
-      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8oGVPJMhc-5ylakr9h4ro76WyAO7F1EVkjw&s" alt="האנגר 11">
-      <img referrerpolicy="no-referrer" src="https://static.tickchak.co.il/images/live/more/eventNew.jpg" alt="האנגר 11">
-      <img referrerpolicy="no-referrer" src="https://hangar11.co.il/events/wp-content/uploads/2016/11/10945684_830005020379231_2016055129184767452_o.jpg" alt="האנגר 11">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2025/12/shviro-photos-278-scaled.jpg" alt="האנגר 11">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2025/12/shviro-photos-462-scaled.jpg" alt="האנגר 11">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/11/14-Foltyn-2024_11_09-Zohar-Revivo-044-scaled.jpg" alt="האנגר 11">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/11/13-Foltyn-2024_11_09-Zohar-Revivo-034-scaled.jpg" alt="האנגר 11">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/11/Foltyn-2024_11_09-Zohar-Revivo-107-scaled.jpg" alt="האנגר 11">
+<section class="slide loc-slide" id="s4">
+  <div class="scan" style="animation-delay:.3s"></div>
+  <div class="loc-top" style="z-index:2">
+    <div>
+      <div class="loc-num">LOCATION #1</div>
+      <div class="loc-title ain">האנגר 11</div>
     </div>
-    <div class="gallery-dots" id="g1dots"></div>
+    <div class="loc-sub">תל אביב · 1,000 איש</div>
+  </div>
+  <div class="loc-strip" style="z-index:2">
+    <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmO_ODQYFqMaFuawdjn_VKaMJ7hLgig5hUrA&s" alt="האנגר 11">
+    <img referrerpolicy="no-referrer" src="https://static.tickchak.co.il/all/liveNew_090TUzdjMvB1LaN2L4UTd5xWZyNXOCFXVu_x90TUwVzdDd2MN9mVzgTR2EmT5pXZpBlT.webp_ebe6f851-105c-41c2-a2b1-cdc6eb639fbc.webp" alt="האנגר 11">
+    <img referrerpolicy="no-referrer" src="https://2doevents.co.il/wp-content/uploads/2021/03/DSC_0114-Copy.jpg" alt="האנגר 11">
   </div>
 </section>
 
-<!-- ══ S5: EXPO ══ -->
-<section class="slide gallery-slide" id="s5">
-  <div class="gallery-top" style="z-index:2">
-    <div><div class="gallery-num">LOCATION #2</div><div class="gallery-title ain">אקספו ביתן 1</div></div>
-    <div style="color:var(--muted);font-size:13px">תל אביב</div>
-  </div>
-  <div class="gallery-track-wrap" style="z-index:2">
-    <button class="gal-btn prev" onclick="galPrev('g2')">&#8250;</button>
-    <button class="gal-btn next" onclick="galNext('g2')">&#8249;</button>
-<div class="gallery-track" id="g2track">
-      <img referrerpolicy="no-referrer" src="https://www.by-p.com/wp-content/uploads/2024/01/Tomer-Foltyn-2022_11_29-Mobileye-IPO-0387-1536x1024.jpg" alt="אקספו">
-      <img referrerpolicy="no-referrer" src="https://static.tickchak.co.il/images/live/more/venueImage.webp" alt="אקספו">
-      <img referrerpolicy="no-referrer" src="https://expotelaviv.co.il/wp-content/uploads/2024/02/%D7%90%D7%99%D7%A8%D7%95%D7%95%D7%95%D7%99%D7%96%D7%99%D7%95%D7%9F-2019-1-scaled.jpeg" alt="אקספו">
-      <img referrerpolicy="no-referrer" src="https://expotelaviv.co.il/wp-content/uploads/2022/06/IMG-20190327-WA0004-scaled.jpg" alt="אקספו">
-      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQObiJkYTgyw5JM9MFhxgFwymgm0ZVHoNaDmA&s" alt="אקספו">
-      <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtan4D-9puwvQfj1ywh5_65f_atki4YcqVVg&s" alt="אקספו">
+<!-- ══ S5: LAGO ══ -->
+<section class="slide loc-slide" id="s5">
+  <div class="scan p" style="animation-delay:.5s"></div>
+  <div class="loc-top" style="z-index:2">
+    <div>
+      <div class="loc-num">LOCATION #2</div>
+      <div class="loc-title ain">LAGO</div>
     </div>
-    <div class="gallery-dots" id="g2dots"></div>
+    <div class="loc-sub">תל אביב</div>
+  </div>
+  <div class="loc-strip" style="z-index:2">
+    <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRodvAWiBxHyJRpZDWgLCm9cDVzhdOeI5rew&s" alt="LAGO">
+    <img referrerpolicy="no-referrer" src="https://media.getmood.io/warehouse/dynamic/228603.jpg" alt="LAGO">
+    <img referrerpolicy="no-referrer" src="https://business.urbanbridesmag.co.il/wp-content/uploads/2024/02/4-1-9.jpg" alt="LAGO">
+  </div>
+</section>
+
+<!-- ══ S5b: חוות רונית ══ -->
+<section class="slide loc-slide" id="s5b">
+  <div class="scan" style="animation-delay:.4s"></div>
+  <div class="loc-top" style="z-index:2">
+    <div>
+      <div class="loc-num">LOCATION #3</div>
+      <div class="loc-title ain">חוות רונית</div>
+    </div>
+    <div class="loc-sub">מודיעין</div>
+  </div>
+  <div class="loc-strip" style="z-index:2">
+    <img referrerpolicy="no-referrer" src="https://ronitfarm.com/wp-content/uploads/2023/03/WhatsApp-Image-2021-10-07-at-16.50.34-10.jpeg" alt="חוות רונית">
+    <img referrerpolicy="no-referrer" src="https://www.ykfir.com/wp-content/uploads/2018/12/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A24-1.jpg" alt="חוות רונית">
+    <img referrerpolicy="no-referrer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_9dnh_v5dufi-oS9_lkV62Zzn-lCrxQh4yg&s" alt="חוות רונית">
   </div>
 </section>
 
@@ -2086,33 +2104,33 @@ var v0=Object.defineProperty;var k0=(l,h,b)=>h in l?v0(l,h,{enumerable:!0,config
   <div class="dot c" style="top:6%;right:6%;z-index:3"></div><div class="dot p" style="top:6%;left:6%;animation-delay:.5s;z-index:3"></div>
   <div class="dot c" style="bottom:6%;right:6%;animation-delay:1s;z-index:3"></div><div class="dot p" style="bottom:6%;left:6%;animation-delay:1.5s;z-index:3"></div>
   <div class="gframe" style="inset:5%"></div>
-  <div class="hosts-wrap ain" style="z-index:2">
-    <div class="lf-tag" style="text-align:center;margin-bottom:.8rem">הנחיה</div>
+  <div class="hosts-wrap ain" style="z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:1.5rem">
+    <div class="lf-tag" style="text-align:center;margin-bottom:.5rem">הנחיה</div>
     <div class="hosts-title" style="font-size:clamp(3rem,7vw,6rem);text-align:center;font-weight:900;font-family:'Rubik',sans-serif;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.7);letter-spacing:.08em;text-shadow:0 0 30px rgba(18,184,255,.9),0 0 60px rgba(18,184,255,.6),0 0 100px rgba(18,184,255,.35)">הנחיה</div>
     
 <div class="hosts-grid">
       <div class="host-card ain" style="transition-delay:.1s">
-        <div class="host-img-wrap"><img src="images/host_ron_shahar.jpg" alt="רון שחר"></div>
+        <div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://img.haarets.co.il/bs/0000017f-e71e-df5f-a17f-ffdec74e0000/fd/82/08c339b66128e699c22dacbefa34/1044339862.jpg?precrop=562,563,x156,y3&width=375&height=375&cmsprod" alt="רון שחר"></div>
         <div class="host-name">רון שחר</div>
       </div>
       <div class="host-card ain" style="transition-delay:.2s">
-        <div class="host-img-wrap"><img src="images/host_asi_israelof.jpg" alt="אסי ישראלוף"></div>
+        <div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://i.scdn.co/image/ab67656300005f1fa5f8ba19c8b555b5a40b81cb" alt="אסי ישראלוף"></div>
         <div class="host-name">אסי ישראלוף</div>
       </div>
       <div class="host-card ain" style="transition-delay:.3s">
-        <div class="host-img-wrap"><img src="images/host_shalom_michaelshvili.jpg" alt="שלום מיכאשווילי"></div>
+        <div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/6/60/Shalom_Michaelshvili_2.jpg" alt="שלום מיכאשווילי"></div>
         <div class="host-name">שלום מיכאשווילי</div>
       </div>
       <div class="host-card ain" style="transition-delay:.4s">
-        <div class="host-img-wrap"><img src="images/host_shani_cohen.jpg" alt="שני כהן"></div>
+        <div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://www.zohar-agency.com/wp-content/uploads/%D7%90%D7%AA%D7%A8-5-1.jpg" alt="שני כהן"></div>
         <div class="host-name">שני כהן</div>
       </div>
       <div class="host-card ain" style="transition-delay:.5s">
-        <div class="host-img-wrap"><img src="images/host_moshik_glamin.png" alt="מושיק גלאמין"></div>
+        <div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://www.hit.ac.il/wp-content/uploads/2024/07/%D7%9E%D7%95%D7%A9%D7%99%D7%A7-%D7%92%D7%9C%D7%90%D7%9E%D7%99%D7%9F-1X1.png" alt="מושיק גלאמין"></div>
         <div class="host-name">מושיק גלאמין</div>
       </div>
       <div class="host-card ain" style="transition-delay:.6s">
-        <div class="host-img-wrap"><img src="images/host_ronit_yodkevitz.jpg" alt="רונית יודקביץ"></div>
+        <div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://images.maariv.co.il/image/upload/f_auto,fl_lossy/c_fill,g_faces:center,h_700,w_950/555259" alt="רונית יודקביץ"></div>
         <div class="host-name">רונית יודקביץ</div>
       </div>
 </div>
@@ -2388,7 +2406,7 @@ const slidesEl = document.getElementById('slides');
 const navBtns = document.querySelectorAll('.nb');
 const prog = document.getElementById('prog');
 // slide IDs in order
-const SIDS = ['s0','s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14','s15','s16','s17','s18','s19','s20','s21'];
+const SIDS = ['s0','s1','s2','s3','s4','s5','s5b','s6','s7','s8','s9','s10','s11','s12','s13','s14','s15','s16','s17','s18','s19','s20','s21'];
 const TOTAL = SIDS.length;
 
 function goTo(i){document.getElementById(SIDS[i])?.scrollIntoView({behavior:'smooth'})}
