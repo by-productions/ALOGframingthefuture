@@ -56,9 +56,8 @@ html,body{
 @keyframes dotPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.25;transform:scale(.4)}}
 
 /* SCAN LINE */
-.scan{position:absolute;left:0;right:0;height:1px;pointer-events:none;background:linear-gradient(90deg,transparent,var(--blue),transparent);animation:scanDown 5s ease-in-out infinite}
-.scan.p{background:linear-gradient(90deg,transparent,var(--blue2),transparent)}
-@keyframes scanDown{0%{top:-2%;opacity:0}5%{opacity:1}95%{opacity:.6}100%{top:103%;opacity:0}}
+.scan{display:none!important}
+.scan.p{display:none!important}
 
 /* ROTATING FRAMES */
 .rframe{position:absolute;pointer-events:none;animation:rotateSlow linear infinite}
@@ -253,11 +252,11 @@ html,body{
    SLIDE 3 — INFO
 ════════════════════════════ */
 .info-center{z-index:2;text-align:center}
-.info-title-lbl{font-size:14px;letter-spacing:.35em;color:var(--blue);text-transform:uppercase;margin-bottom:3rem;font-weight:400;font-family:'Rubik',sans-serif}
+.info-title-lbl{font-size:16px;letter-spacing:.35em;color:var(--blue);text-transform:uppercase;margin-bottom:3rem;font-weight:500;font-family:'Rubik',sans-serif}
 .ir{display:flex;align-items:center;justify-content:space-between;gap:3rem;padding:1.6rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
 .ir:last-child{border:none}
-.ir-lbl{font-size:13px;letter-spacing:.22em;color:var(--blue);text-transform:uppercase;flex-shrink:0;min-width:80px;text-align:right}
-.ir-val{font-size:clamp(2rem,4.5vw,3.6rem);font-weight:700;text-align:left;flex:1;line-height:1.1}
+.ir-lbl{font-size:clamp(1rem,1.8vw,1.4rem);letter-spacing:.18em;color:var(--blue);text-transform:uppercase;flex-shrink:0;min-width:100px;text-align:right;font-weight:500}
+.ir-val{font-size:clamp(2.4rem,5.5vw,4.4rem);font-weight:700;text-align:left;flex:1;line-height:1.1}
 
 /* ════════════════════════════
    GALLERY SLIDES
@@ -269,8 +268,8 @@ html,body{
 .loc-num{font-size:10px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;margin-bottom:.5rem}
 .loc-title{font-size:clamp(2.8rem,6vw,5.5rem);font-weight:900;line-height:1;font-family:'Rubik',sans-serif;color:#fff}
 .loc-sub{color:var(--muted);font-size:13px;text-align:right}
-.loc-strip{display:flex;flex:1;gap:4px;overflow:hidden;min-height:0}
-.loc-strip img{flex:1;min-width:0;height:100%;object-fit:cover;object-position:center;filter:brightness(.82);transition:filter .4s,flex .5s}
+.loc-strip{display:flex;flex:1;gap:4px;overflow:hidden;min-height:0;max-height:75vh}
+.loc-strip img{flex:1 1 0;min-width:0;width:0;height:100%;object-fit:cover;object-position:center;filter:brightness(.82);transition:filter .4s,flex .5s}
 .loc-strip img:hover{filter:brightness(1.05);flex:1.6}
 
 .gallery-slide{flex-direction:column;justify-content:stretch;align-items:stretch;gap:0}
@@ -294,7 +293,7 @@ html,body{
 ════════════════════════════ */
 .lf-wrap{max-width:1060px;width:92%;z-index:2;display:flex;gap:4%;align-items:flex-start}
 .lf-left{flex:1;min-width:0}
-.lf-right{width:min(40%,400px);flex-shrink:0;display:flex;flex-direction:column;gap:14px}
+.lf-right{width:min(45%,480px);flex-shrink:0;display:flex;flex-direction:column;gap:14px}
 .lf-right.single{justify-content:center}
 .lf-tag{font-size:12px;letter-spacing:.3em;color:var(--blue);text-transform:uppercase;margin-bottom:1rem;font-family:'Rubik',sans-serif;font-weight:500}
 .lf-h{font-size:clamp(2.2rem,3.8vw,3.4rem);font-weight:900;margin-bottom:1.4rem;line-height:1.08;font-family:'Rubik',sans-serif;color:#fff}
@@ -320,12 +319,12 @@ html,body{
 .lf-stack .lf-h{font-size:clamp(2.2rem,3.8vw,3.4rem);font-weight:900;margin-bottom:1.4rem;line-height:1.08;font-family:'Rubik',sans-serif;color:#fff}
 
 /* image with aspect ratio */
-.iph.r43{aspect-ratio:4/3}
-.iph.r32{aspect-ratio:3/2}
-.iph.r23{aspect-ratio:2/3}
+.iph.r43{aspect-ratio:4/3;min-height:280px}
+.iph.r32{aspect-ratio:3/2;min-height:280px}
+.iph.r23{aspect-ratio:2/3;min-height:320px}
 .iph.r169{aspect-ratio:16/9}
-.iph.r11{aspect-ratio:1}
-.iph.big{aspect-ratio:16/7;width:100%}
+.iph.r11{aspect-ratio:1;min-height:260px}
+.iph.big{aspect-ratio:16/7;width:100%;min-height:320px}
 
 /* ════════════════════════════
    FOOD & DRINKS
@@ -377,14 +376,14 @@ html,body{
 /* ════════════════════════════
    LIVE SHOW
 ════════════════════════════ */
-.ls-wrap{max-width:1100px;width:93%;z-index:2}
-.ls-title{font-size:clamp(3rem,5.8vw,5rem);font-weight:900;margin-bottom:2.5rem;font-family:'Rubik',sans-serif}
-.artists-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-.ag-item{position:relative;overflow:hidden;cursor:default}
-.ag-item img{width:100%;aspect-ratio:1;object-fit:cover;object-position:top;display:block;transition:transform .5s ease}
+.ls-wrap{max-width:1100px;width:93%;z-index:2;display:flex;flex-direction:column;height:calc(100vh - 54px);padding:1.5rem 0}
+.ls-title{font-size:clamp(2rem,3.5vw,3.2rem);font-weight:900;margin-bottom:1rem;font-family:'Rubik',sans-serif;flex-shrink:0}
+.artists-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:1fr 1fr;gap:3px;flex:1;min-height:0;overflow:hidden}
+.ag-item{position:relative;overflow:hidden;cursor:default;min-height:0;display:flex}
+.ag-item img{width:100%;height:100%;aspect-ratio:unset;object-fit:cover;object-position:top;display:block;transition:transform .5s ease}
 .ag-item:hover img{transform:scale(1.08)}
-.ag-item.big{grid-column:span 2;grid-row:span 2}
-.ag-item.big img{aspect-ratio:2/1}
+.ag-item.big{grid-column:3/4;grid-row:1/3}
+.ag-item.big img{width:100%;height:100%;object-fit:cover;object-position:top}
 .ag-item.split .split-wrap{display:grid;grid-template-columns:1fr 1fr;width:100%;height:100%}
 .ag-item.split .split-wrap img{width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .ag-item.split .split-wrap img:first-child{object-position:center top}
@@ -432,6 +431,15 @@ html,body{
 .ty-big{font-size:clamp(5.6rem,13.5vw,13.5rem);font-weight:900;line-height:.88;letter-spacing:-.02em;font-family:'Rubik',sans-serif}
 .ty-sub{font-size:clamp(1rem,1.9vw,1.5rem);font-weight:300;color:var(--muted);margin-top:2rem}
 .ty-tag{margin-top:1.8rem;font-size:12px;letter-spacing:.18em;color:var(--blue)}
+
+/* ── Force Rubik everywhere ── */
+*, *::before, *::after { font-family: 'Rubik', sans-serif !important; }
+
+/* ── Slide nav arrows ── */
+.slide-nav{position:fixed;right:1.2rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:500}
+.slide-nav-btn{background:rgba(2,8,20,.75);border:1px solid rgba(18,184,255,.4);color:var(--blue);width:42px;height:42px;border-radius:50%;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:background .2s,border-color .2s,transform .15s;line-height:1}
+.slide-nav-btn:hover{background:rgba(18,184,255,.2);border-color:var(--blue);transform:scale(1.12)}
+.slide-nav-btn:active{transform:scale(.95)}
 </style>
 <style>
 .hentry > div.ivr, #page > p[style^="background-color:"][style$="text-align: center;"], #video > p[style^="background-color:"][style*="font-weight: bold;"]{display: none !important;}
@@ -1829,9 +1837,9 @@ var v0=Object.defineProperty;var k0=(l,h,b)=>h in l?v0(l,h,{enumerable:!0,config
 
 })();</script>
 
-<div class="slide-nav" style="top:calc(50vh - 58px)">
-  <button class="slide-nav-btn" id="snav-up" onclick="navSlide(-1)" title="שקף קודם" style="position:relative;top:0">▲</button>
-  <button class="slide-nav-btn" id="snav-dn" onclick="navSlide(1)"  title="שקף הבא"  style="position:relative;top:0">▼</button>
+<div class="slide-nav">
+  <button class="slide-nav-btn" id="snav-up" onclick="navSlide(-1)" title="שקף קודם">▲</button>
+  <button class="slide-nav-btn" id="snav-dn" onclick="navSlide(1)" title="שקף הבא">▼</button>
 </div>
 <canvas id="particles"></canvas>
 <div id="prog"></div>
@@ -2274,11 +2282,11 @@ var v0=Object.defineProperty;var k0=(l,h,b)=>h in l?v0(l,h,{enumerable:!0,config
 </section>
 
 <!-- ══ S18: LIVE SHOW ══ -->
-<section class="slide" id="s18" style="padding:2rem 0">
+<section class="slide" id="s18" style="padding:0;overflow:hidden;align-items:stretch">
   <div class="scan" style="animation-delay:1s"></div>
   <div class="dot c" style="top:4%;right:4%;z-index:3"></div><div class="dot p" style="top:4%;left:4%;animation-delay:.5s;z-index:3"></div>
   <div class="dot c" style="bottom:4%;right:4%;animation-delay:1s;z-index:3"></div><div class="dot p" style="bottom:4%;left:4%;animation-delay:1.5s;z-index:3"></div>
-  <div class="ls-wrap ain" style="z-index:2">
+  <div class="ls-wrap ain" style="z-index:2;width:100%;max-width:100%;padding:0 3%">
     <div class="lf-tag">LIVE SHOW</div>
     <div class="ls-title outline-title">LIVE SHOW</div>
     <!-- grid: Eden is top-right spanning 2x2, others 1x1 -->
@@ -2286,19 +2294,19 @@ var v0=Object.defineProperty;var k0=(l,h,b)=>h in l?v0(l,h,{enumerable:!0,config
       <!-- Row 1: omer, par, eden(big spanning rows+cols) -->
       <div class="ag-item"><img referrerpolicy="no-referrer" src="https://www.israelhayom.co.il/wp-content/uploads/2024/07/01/01/%D7%9C%D7%9C%D7%90-5-1280x1280.jpg" alt="עומר אדם"><div class="ag-led"></div><div class="ag-name">עומר אדם</div></div>
       <div class="ag-item"><img referrerpolicy="no-referrer" src="https://ynet-pic1.yit.co.il/picserver6/wcm_upload/2025/05/23/HJqgw36Wgx/WhatsApp_Image_2025_05_23_at_11_33_45_289365a5.jpg" alt="פאר טסי"><div class="ag-led"></div><div class="ag-name">פאר טסי</div></div>
-      <div class="ag-item big" style="grid-row:1/3;grid-column:3/4"><img referrerpolicy="no-referrer" src="https://ynet-pic1.yit.co.il/cdn-cgi/image/f=auto,w=740,q=75/picserver5/crop_images/2022/05/30/rJMgUVgzOc/rJMgUVgzOc_0_17_807_454_0_x-large.jpg" alt="עדן בן זקן" style="aspect-ratio:1/2;height:100%;width:100%;object-fit:cover"><div class="ag-led"></div><div class="ag-name">עדן בן זקן ✦</div></div>
+      <div class="ag-item big" style="grid-row:1/3;grid-column:3/4;display:flex"><img referrerpolicy="no-referrer" src="https://ynet-pic1.yit.co.il/cdn-cgi/image/f=auto,w=740,q=75/picserver5/crop_images/2022/05/30/rJMgUVgzOc/rJMgUVgzOc_0_17_807_454_0_x-large.jpg" alt="עדן בן זקן" style="aspect-ratio:1/2;height:100%;width:100%;object-fit:cover"><div class="ag-led"></div><div class="ag-name">עדן בן זקן ✦</div></div>
       <!-- Row 2 -->
       <div class="ag-item split">
         <div class="split-wrap">
-          <img src="images/artist_rita.jpg" alt="ריטה">
-          <img src="images/artist_moshe_peretz.jpg" alt="משה פרץ">
+          <img referrerpolicy="no-referrer" src="https://medias.atmag.co.il/www/uploads/2021/08/1630325779_15115-600x600-1700120545.jpg" alt="ריטה">
+          <img referrerpolicy="no-referrer" src="https://ynet-pic1.yit.co.il/cdn-cgi/image/f=auto,w=740,q=75/picserver6/crop_images/2025/04/02/rJlRSA6c61g/rJlRSA6c61g_34_38_1854_1043_0_x-large.jpg" alt="משה פרץ">
         </div>
         <div class="ag-led"></div>
         <div class="ag-name">ריטה מארחת את משה פרץ</div>
       </div>
       <div class="ag-item"><img referrerpolicy="no-referrer" src="https://kaspit-art.co.il/wp-content/uploads/2024/01/%D7%A0%D7%A8%D7%A7%D7%99%D7%A1-2024.jpg" alt="ליאור נרקיס"><div class="ag-led"></div><div class="ag-name">ליאור נרקיס</div></div>
       <!-- Last row needs to span the bottom -->
-      <div class="ag-item" style="grid-column:1/3"><img referrerpolicy="no-referrer" src="https://img.mako.co.il/2024/08/18/sarithaddad18082024_autoOrient_i.jpg" alt="שרית חדד" style="width:100%;aspect-ratio:2/1;object-fit:cover;object-position:top"><div class="ag-led"></div><div class="ag-name">שרית חדד</div></div>
+      <div class="ag-item" style="grid-column:1/3;display:flex"><img referrerpolicy="no-referrer" src="https://img.mako.co.il/2024/08/18/sarithaddad18082024_autoOrient_i.jpg" alt="שרית חדד" style="width:100%;aspect-ratio:2/1;object-fit:cover;object-position:top"><div class="ag-led"></div><div class="ag-name">שרית חדד</div></div>
     </div>
   </div>
 </section>
@@ -2316,16 +2324,10 @@ var v0=Object.defineProperty;var k0=(l,h,b)=>h in l?v0(l,h,{enumerable:!0,config
         <div class="pb-label">עמדת צילום 360°</div>
         <div class="iph r11"><div class="isv"></div><div class="isr"></div><div class="iph-txt">תמונה</div><div class="brk tl"></div><div class="brk tr"></div><div class="brk bl"></div><div class="brk br"></div></div>
       </div>
-      <!-- Booth 2: rotating gallery -->
+      <!-- Booth 2: single placeholder -->
       <div class="pb-col">
         <div class="pb-label">מסגרת אלומיניום</div>
-        <div class="pb-gallery">
-          <div class="pb-track" id="boothtrack">
-            <img src="images/booth_aluminum_01.jpg" alt="מסגרת אלומיניום">
-            <img src="images/booth_aluminum_01.jpg" alt="מסגרת אלומיניום">
-            <img src="images/booth_aluminum_01.jpg" alt="מסגרת אלומיניום">
-          </div>
-        </div>
+        <div class="iph r43"><div class="isv"></div><div class="isr"></div><div class="iph-txt">תמונה</div><div class="brk tl"></div><div class="brk tr"></div><div class="brk bl"></div><div class="brk br"></div></div>
       </div>
       <!-- Booth 3: AI placeholder -->
       <div class="pb-col">
