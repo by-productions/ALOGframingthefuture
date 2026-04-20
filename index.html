@@ -161,8 +161,8 @@ html,body{
 .loc-title{font-size:clamp(2.8rem,6vw,5.5rem);font-weight:900;line-height:1;font-family:'Rubik',sans-serif;color:#fff}
 .loc-sub{color:var(--muted);font-size:13px;text-align:right}
 .loc-strip{display:flex;flex:1;gap:3px;overflow:hidden;min-height:0;align-items:stretch}
-.loc-strip img{flex:1 1 0;min-width:0;width:0;min-height:0;height:100%;max-height:100%;object-fit:cover;object-position:center;filter:brightness(.85);transition:filter .4s,flex .5s;display:block}
-.loc-strip img:hover{filter:brightness(1.05);flex:1.6}
+.loc-strip img{flex:1 1 0;min-width:0;width:0;min-height:0;height:100%;max-height:100%;object-fit:cover;object-position:center;filter:brightness(.85);display:block}
+.loc-strip img:hover{filter:brightness(1.05)}
 
 .lf-wrap{max-width:1060px;width:92%;z-index:2;display:flex;gap:4%;align-items:flex-start}
 .lf-left{flex:1;min-width:0}
@@ -413,29 +413,30 @@ html,body{
       <img src="images/lf_entrance_hall.png" alt="כניסה לאולם"
            style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
 
-      <!-- טקסט overlay בחלק העליון -->
-      <div style="position:absolute;top:0;left:0;right:0;padding:2rem 5% 2rem;background:linear-gradient(180deg,rgba(2,8,20,.82) 0%,rgba(2,8,20,.6) 60%,transparent 100%);backdrop-filter:blur(2px)">
-        <div class="lf-tag" style="color:var(--blue);font-size:11px;letter-spacing:.35em;text-transform:uppercase;margin-bottom:.6rem;font-family:Rubik,sans-serif">LOOK &amp; FEEL</div>
+      <!-- טקסט overlay בחלק העליון — רקע כהה מוגבר -->
+      <div style="position:absolute;top:0;left:0;right:0;padding:2.2rem 5% 3rem;background:linear-gradient(180deg,rgba(2,8,20,.95) 0%,rgba(2,8,20,.88) 55%,rgba(2,8,20,.55) 80%,transparent 100%);backdrop-filter:blur(4px)">
+        <div class="lf-tag" style="color:var(--blue);font-size:12px;letter-spacing:.35em;text-transform:uppercase;margin-bottom:.8rem;font-family:Rubik,sans-serif">LOOK &amp; FEEL</div>
         <div style="display:flex;gap:5%;align-items:flex-start;flex-wrap:wrap">
-          <div style="flex:1;min-width:220px">
-            <div class="lf-h" style="font-size:clamp(1.5rem,2.4vw,2.2rem);font-weight:900;color:#fff;margin-bottom:.6rem;font-family:Rubik,sans-serif">כניסה לאירוע ולאולם</div>
-            <div style="font-size:clamp(.8rem,1.1vw,.95rem);line-height:1.75;color:rgba(255,255,255,.85);font-family:Rubik,sans-serif;direction:rtl">
+          <div style="flex:1;min-width:240px">
+            <div class="lf-h" style="font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:900;color:#fff;margin-bottom:.8rem;font-family:Rubik,sans-serif;text-shadow:0 2px 12px rgba(0,0,0,.6)">כניסה לאירוע ולאולם</div>
+            <div style="font-size:clamp(.95rem,1.3vw,1.1rem);line-height:1.85;color:rgba(255,255,255,.92);font-family:Rubik,sans-serif;direction:rtl;text-shadow:0 1px 6px rgba(0,0,0,.5)">
               מיתוג הכניסה מהווה נקודת מפתח בחוויית האירוע — שער חווייתי ומרשים.<br>
               <strong style="color:var(--blue);font-weight:400">מרכיבי המיתוג:</strong> תרנים ממותגים, קיר ברוכים הבאים, עמדות LED המדמות חלונות ומסגרות — מעבר בין פנים לחוץ, אל הקונספט: <strong style="color:var(--blue)">FRAMING THE FUTURE.</strong>
             </div>
           </div>
-          <div style="flex:1;min-width:200px">
-            <div style="font-size:clamp(.8rem,1.1vw,.95rem);line-height:1.75;color:rgba(255,255,255,.85);font-family:Rubik,sans-serif;direction:rtl;padding-top:2.6rem">
+          <div style="flex:1;min-width:220px">
+            <div style="font-size:clamp(.95rem,1.3vw,1.1rem);line-height:1.85;color:rgba(255,255,255,.92);font-family:Rubik,sans-serif;direction:rtl;padding-top:3.2rem;text-shadow:0 1px 6px rgba(0,0,0,.5)">
               <strong style="color:var(--blue);font-weight:400">עיצוב האולם</strong> — שפה מינימליסטית של קווים נקיים, אור וחומר. מרכזי שולחן מוארים, טופים ממותגים ושפה עיצובית אחידה לאורך כל הערב.
             </div>
           </div>
         </div>
       </div>
 
-      <!-- hint בתחתית -->
-      <div id="eg-hint" style="position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;animation:bounce 2.2s ease-in-out infinite;pointer-events:none">
-        <span style="font-size:11px;letter-spacing:.28em;color:var(--blue);text-transform:uppercase;white-space:nowrap;text-shadow:0 0 12px rgba(18,184,255,.6)">לחץ להיכנס לאולם</span>
-        <div style="width:1px;height:22px;background:linear-gradient(180deg,var(--blue),transparent)"></div>
+      <!-- כפתור מרכזי להיכנס לאולם -->
+      <div id="eg-hint" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:0;pointer-events:none">
+        <div style="padding:14px 32px;background:rgba(2,8,20,.72);border:1.5px solid rgba(18,184,255,.7);border-radius:30px;backdrop-filter:blur(8px);box-shadow:0 0 24px rgba(18,184,255,.35);animation:bounce 2.2s ease-in-out infinite">
+          <span style="font-size:clamp(.9rem,1.4vw,1.1rem);letter-spacing:.22em;color:#fff;text-transform:uppercase;white-space:nowrap;font-family:Rubik,sans-serif;font-weight:500">לחץ להיכנס לאולם ←</span>
+        </div>
       </div>
 
       <!-- LED border -->
@@ -455,9 +456,9 @@ html,body{
       <!-- LED overlay -->
       <div style="position:absolute;inset:0;border:2px solid rgba(18,184,255,.4);box-shadow:inset 0 0 50px rgba(18,184,255,.08);pointer-events:none"></div>
       <!-- כפתור חזרה -->
-      <div style="position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);pointer-events:auto;z-index:10"
+      <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);pointer-events:auto;z-index:10"
            onclick="event.stopPropagation();entranceBack()">
-        <span style="font-size:11px;letter-spacing:.22em;color:rgba(255,255,255,.8);text-transform:uppercase;cursor:pointer;padding:7px 18px;background:rgba(2,8,20,.65);border:1px solid rgba(18,184,255,.4);border-radius:20px;backdrop-filter:blur(6px)">← חזור לכניסה</span>
+        <span style="font-size:clamp(.85rem,1.2vw,1rem);letter-spacing:.18em;color:#fff;text-transform:uppercase;cursor:pointer;padding:12px 28px;background:rgba(2,8,20,.72);border:1.5px solid rgba(18,184,255,.5);border-radius:28px;backdrop-filter:blur(8px);box-shadow:0 0 18px rgba(18,184,255,.25);font-family:Rubik,sans-serif">← חזור לכניסה</span>
       </div>
     </div>
 
@@ -501,8 +502,8 @@ function entranceBack(){
         האלמנט מייצר תחושת עומק ותנועה, ומחזק את שפת הקונספט — חיבור בין מסגרת, אור ומבט.
       </div>
     </div>
-    <div class="lf-right single ain" style="transition-delay:.2s">
-      <div class="iph r43" style="overflow:hidden;"><img src="images/lf_bar.png" alt="בר מרכזי" style="width:100%;height:100%;object-fit:cover;display:block;"><div class="brk tl"></div><div class="brk tr"></div><div class="brk bl"></div><div class="brk br"></div></div>
+    <div class="lf-right ain" style="transition-delay:.2s;width:min(55%,580px)">
+      <div class="iph r43" style="overflow:hidden;min-height:340px;"><img src="images/lf_bar.png" alt="בר מרכזי" style="width:100%;height:100%;object-fit:cover;display:block;"><div class="brk tl"></div><div class="brk tr"></div><div class="brk bl"></div><div class="brk br"></div></div>
     </div>
   </div>
 </section>
