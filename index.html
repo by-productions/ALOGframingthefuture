@@ -275,16 +275,14 @@ html,body{
     <button class="nb" onclick="goTo(5)">LAGO</button>
     <button class="nb" onclick="goTo(6)">חוות רונית</button>
     <button class="nb" onclick="goTo(7)">כניסה לאולם</button>
-    <button class="nb" onclick="goTo(8)">כניסה</button>
-    <button class="nb" onclick="goTo(9)">אולם</button>
-    <button class="nb" onclick="goTo(10)">בר</button>
-    <button class="nb" onclick="goTo(11)">אוכל</button>
-    <button class="nb" onclick="goTo(12)">הנחיה</button>
-    <button class="nb" onclick="goTo(13)">במה</button>
-    <button class="nb" onclick="goTo(17)">LIVE</button>
-    <button class="nb" onclick="goTo(18)">עמדות</button>
-    <button class="nb" onclick="goTo(19)">עוד</button>
-    <button class="nb" onclick="goTo(20)">סיום</button>
+    <button class="nb" onclick="goTo(8)">בר</button>
+    <button class="nb" onclick="goTo(9)">אוכל</button>
+    <button class="nb" onclick="goTo(10)">הנחיה</button>
+    <button class="nb" onclick="goTo(11)">במה</button>
+    <button class="nb" onclick="goTo(15)">LIVE</button>
+    <button class="nb" onclick="goTo(16)">עמדות</button>
+    <button class="nb" onclick="goTo(17)">עוד</button>
+    <button class="nb" onclick="goTo(18)">סיום</button>
   </div>
 </nav>
 
@@ -734,20 +732,37 @@ function entranceBack(){
 <section class="slide" id="s19" style="padding:2rem 0">
   <div class="dot p" style="top:4%;right:4%;z-index:3"></div><div class="dot c" style="bottom:4%;left:4%;animation-delay:1.3s;z-index:3"></div>
   <div class="pb-wrap ain" style="z-index:2">
-    <div class="lf-tag">עמדות צילום</div>
-    <div class="pb-title outline-title">עמדות<br>צילום</div>
-    <div class="pb-grid">
-      <div class="pb-col">
+    <div class="pb-title outline-title" style="margin-bottom:2rem">עמדות<br>צילום</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;width:100%">
+      <div style="display:flex;flex-direction:column;gap:10px">
         <div class="pb-label">עמדת צילום 360°</div>
-        <div class="iph r11" style="overflow:hidden;"><img src="images/booth_360.png" alt="עמדת 360" style="width:100%;height:100%;object-fit:cover;display:block;"><div class="brk tl"></div><div class="brk tr"></div><div class="brk bl"></div><div class="brk br"></div></div>
+        <div style="aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(18,184,255,.35);box-shadow:0 0 16px rgba(18,184,255,.12);position:relative">
+          <img src="images/booth_360.png" alt="עמדת 360" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;top:0;right:0;width:14px;height:14px;border-top:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
+          <div style="position:absolute;top:0;left:0;width:14px;height:14px;border-top:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
+          <div style="position:absolute;bottom:0;right:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
+          <div style="position:absolute;bottom:0;left:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
+        </div>
       </div>
-      <div class="pb-col">
+      <div style="display:flex;flex-direction:column;gap:10px">
         <div class="pb-label">מסגרת אלומיניום</div>
-        <div class="iph r43" style="overflow:hidden;"><img src="images/booth_frame.png" alt="מסגרת אלומיניום" style="width:100%;height:100%;object-fit:cover;display:block;"><div class="brk tl"></div><div class="brk tr"></div><div class="brk bl"></div><div class="brk br"></div></div>
+        <div style="aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(18,184,255,.35);box-shadow:0 0 16px rgba(18,184,255,.12);position:relative">
+          <img src="images/booth_frame.png" alt="מסגרת אלומיניום" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;top:0;right:0;width:14px;height:14px;border-top:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
+          <div style="position:absolute;top:0;left:0;width:14px;height:14px;border-top:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
+          <div style="position:absolute;bottom:0;right:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
+          <div style="position:absolute;bottom:0;left:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
+        </div>
       </div>
-      <div class="pb-col">
+      <div style="display:flex;flex-direction:column;gap:10px">
         <div class="pb-label">עמדת צילום AI</div>
-        <div class="iph r11" style="overflow:hidden;"><img src="images/booth_ai.png" alt="עמדת AI" style="width:100%;height:100%;object-fit:cover;display:block;"><div class="brk tl"></div><div class="brk tr"></div><div class="brk bl"></div><div class="brk br"></div></div>
+        <div style="aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(18,184,255,.35);box-shadow:0 0 16px rgba(18,184,255,.12);position:relative">
+          <img src="images/booth_ai.png" alt="עמדת AI" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;top:0;right:0;width:14px;height:14px;border-top:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
+          <div style="position:absolute;top:0;left:0;width:14px;height:14px;border-top:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
+          <div style="position:absolute;bottom:0;right:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
+          <div style="position:absolute;bottom:0;left:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -809,7 +824,7 @@ function bindImageFallbacks(scope=document){
 const slidesEl = document.getElementById('slides');
 const navBtns = document.querySelectorAll('.nb');
 const prog = document.getElementById('prog');
-const SIDS = ['s0','s1','s2','s3','s4','s5','s5b','s6','s7','s8','s9','s10','s11','s12','s13','s14','s15','s17','s18','s19','s20','s21'];
+const SIDS = ['s0','s1','s2','s3','s4','s5','s5b','s6','s9','s10','s11','s12','s13','s14','s15','s17','s18','s19','s20','s21'];
 const TOTAL = SIDS.length;
 
 function goTo(i){document.getElementById(SIDS[i])?.scrollIntoView({behavior:'smooth'})}
@@ -821,7 +836,7 @@ function updateUI(){
   let cur=0;
   SIDS.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.offsetTop-80<=st)cur=i});
   // nav has fewer buttons than slides so map carefully
-  const navMap={0:0,1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,11:11,12:12,13:13,14:14,15:15,16:16,17:16,18:13,19:14,20:15,21:16};
+  const navMap={0:0,1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,11:11,12:11,13:11,14:11,15:12,16:12,17:13,18:14,19:15};
   navBtns.forEach((b,i)=>b.classList.remove('active'));
   let nb=0;
   for(let i=0;i<=cur;i++){if(navMap[i]!==undefined)nb=navMap[i]}
@@ -837,7 +852,7 @@ setTimeout(updateUI,300);
 
 // ── SLIDE NAV BUTTONS ──
 function navSlide(dir){
-  const SIDS=['s0','s1','s2','s3','s4','s5','s5b','s6','s7','s8','s9','s10','s11','s12','s13','s14','s15','s17','s18','s19','s20','s21'];
+  const SIDS=['s0','s1','s2','s3','s4','s5','s5b','s6','s9','s10','s11','s12','s13','s14','s15','s17','s18','s19','s20','s21'];
   const slidesEl=document.getElementById('slides');
   const st=slidesEl.scrollTop;
   let cur=0;
