@@ -253,85 +253,9 @@ html,body{
 .slide-nav-btn{background:rgba(2,8,20,.75);border:1px solid rgba(18,184,255,.4);color:var(--blue);width:42px;height:42px;border-radius:50%;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:background .2s,border-color .2s,transform .15s;line-height:1}
 .slide-nav-btn:hover{background:rgba(18,184,255,.2);border-color:var(--blue);transform:scale(1.12)}
 .slide-nav-btn:active{transform:scale(.95)}
-
 </style>
 </head>
 <body>
-
-  <!-- פינה ימין עליון: קשת (arch) -->
-  <div class="led-frame lf-arch" style="right:-3%;top:5%;width:18vw;height:28vw;max-width:260px;max-height:400px;--dur:14s;--delay:-3s">
-    <svg viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8 140 L8 55 Q8 8 50 8 Q92 8 92 55 L92 140" stroke="rgba(18,184,255,.2)" stroke-width="1.5"/>
-      <path d="M18 140 L18 58 Q18 18 50 18 Q82 18 82 58 L82 140" stroke="rgba(18,184,255,.08)" stroke-width=".8"/>
-      <path d="M8 120 L8 55 Q8 8 50 8 Q92 8 92 55 L92 120" stroke="rgba(34,211,238,.5)" stroke-width="2" stroke-dasharray="6 14"/>
-    </svg>
-  </div>
-
-  <!-- פינה שמאל תחתון: מסגרת מלבנית קטנה -->
-  <div class="led-frame lf-rect-b" style="left:2%;bottom:10%;width:14vw;height:20vw;max-width:200px;max-height:290px;--dur:9s;--delay:-5s">
-    <svg viewBox="0 0 80 115" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="2" width="76" height="111" stroke="rgba(18,184,255,.18)" stroke-width="1.2"/>
-      <path d="M2 18 L2 2 L18 2" stroke="rgba(34,211,238,.65)" stroke-width="2" stroke-linecap="round"/>
-      <path d="M78 18 L78 2 L62 2" stroke="rgba(34,211,238,.65)" stroke-width="2" stroke-linecap="round"/>
-      <path d="M2 97 L2 113 L18 113" stroke="rgba(34,211,238,.65)" stroke-width="2" stroke-linecap="round"/>
-      <path d="M78 97 L78 113 L62 113" stroke="rgba(34,211,238,.65)" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-  </div>
-
-  <!-- ימין תחתון: קשת קטנה -->
-  <div class="led-frame lf-arch" style="right:1%;bottom:8%;width:13vw;height:18vw;max-width:190px;max-height:270px;--dur:12s;--delay:-7s">
-    <svg viewBox="0 0 80 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 110 L6 45 Q6 6 40 6 Q74 6 74 45 L74 110" stroke="rgba(18,184,255,.18)" stroke-width="1.2"/>
-      <path d="M6 90 L6 45 Q6 6 40 6 Q74 6 74 45 L74 90" stroke="rgba(34,211,238,.45)" stroke-width="1.8" stroke-dasharray="5 12"/>
-    </svg>
-  </div>
-
-  <!-- מרכז שמאל: קו LED אנכי ארוך -->
-  <div class="led-frame lf-line" style="left:6%;top:25%;width:3px;height:40vh;--dur:7s;--delay:-2s">
-    <svg viewBox="0 0 3 200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <line x1="1.5" y1="0" x2="1.5" y2="200" stroke="url(#lineGrad)" stroke-width="1.5"/>
-      <defs>
-        <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
-          <stop offset="0%" stop-color="rgba(18,184,255,0)"/>
-          <stop offset="30%" stop-color="rgba(18,184,255,.4)"/>
-          <stop offset="70%" stop-color="rgba(34,211,238,.4)"/>
-          <stop offset="100%" stop-color="rgba(18,184,255,0)"/>
-        </linearGradient>
-      </defs>
-    </svg>
-  </div>
-
-  <!-- מרכז ימין: קו LED אנכי -->
-  <div class="led-frame lf-line" style="right:6%;top:30%;width:3px;height:35vh;--dur:10s;--delay:-4s">
-    <svg viewBox="0 0 3 200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <line x1="1.5" y1="0" x2="1.5" y2="200" stroke="url(#lineGrad2)" stroke-width="1.5"/>
-      <defs>
-        <linearGradient id="lineGrad2" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
-          <stop offset="0%" stop-color="rgba(18,184,255,0)"/>
-          <stop offset="40%" stop-color="rgba(18,184,255,.35)"/>
-          <stop offset="100%" stop-color="rgba(18,184,255,0)"/>
-        </linearGradient>
-      </defs>
-    </svg>
-  </div>
-
-  <!-- מסגרת מרובעת קטנה — מרחפת ימין אמצע -->
-  <div class="led-frame lf-rect-b" style="right:8%;top:38%;width:8vw;height:8vw;max-width:110px;max-height:110px;--dur:8s;--delay:-1s">
-    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="2" width="56" height="56" stroke="rgba(18,184,255,.28)" stroke-width="1.5"/>
-      <rect x="10" y="10" width="40" height="40" stroke="rgba(18,184,255,.12)" stroke-width=".8"/>
-    </svg>
-  </div>
-
-  <!-- מסגרת מרובעת קטנה — שמאל אמצע -->
-  <div class="led-frame lf-rect" style="left:9%;top:42%;width:6vw;height:6vw;max-width:85px;max-height:85px;--dur:13s;--delay:-6s">
-    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="2" width="56" height="56" stroke="rgba(34,211,238,.22)" stroke-width="1.2" stroke-dasharray="8 6"/>
-    </svg>
-  </div>
-
-</div>
-
 <div class="slide-nav">
   <button class="slide-nav-btn" id="snav-up" onclick="navSlide(-1)" title="שקף קודם">▲</button>
   <button class="slide-nav-btn" id="snav-dn" onclick="navSlide(1)" title="שקף הבא">▼</button>
@@ -350,12 +274,12 @@ html,body{
     <button class="nb" onclick="goTo(5)">LAGO</button>
     <button class="nb" onclick="goTo(6)">חוות רונית</button>
     <button class="nb" onclick="goTo(7)">כניסה לאולם</button>
-    <button class="nb" onclick="goTo(8)">בר</button>
-    <button class="nb" onclick="goTo(9)">אוכל</button>
-    <button class="nb" onclick="goTo(10)">הנחיה</button>
-    <button class="nb" onclick="goTo(11)">במה</button>
-    <button class="nb" onclick="goTo(15)">LIVE</button>
-    <button class="nb" onclick="goTo(16)">עמדות</button>
+    <button class="nb" onclick="goTo(8)">עמדות</button>
+    <button class="nb" onclick="goTo(9)">בר</button>
+    <button class="nb" onclick="goTo(10)">אוכל</button>
+    <button class="nb" onclick="goTo(11)">הנחיה</button>
+    <button class="nb" onclick="goTo(12)">במה</button>
+    <button class="nb" onclick="goTo(16)">LIVE</button>
     <button class="nb" onclick="goTo(17)">עוד</button>
     <button class="nb" onclick="goTo(18)">סיום</button>
   </div>
@@ -379,9 +303,8 @@ html,body{
   <div class="sh"><span>גלול</span><div class="sh-l"></div></div>
 </section>
 
-<!-- ══ S1: LOGO PH ══ -->
+<!-- ══ S1: LOGO ══ -->
 <section class="slide" id="s1">
-
   <div class="dot c" style="top:8%;right:8%"></div><div class="dot c" style="top:8%;left:8%;animation-delay:.7s"></div>
   <div class="dot p" style="bottom:8%;right:8%;animation-delay:1.4s"></div><div class="dot p" style="bottom:8%;left:8%;animation-delay:2.1s"></div>
   <div class="gframe" style="inset:6%"></div><div class="gframe p" style="inset:8.5%"></div>
@@ -415,7 +338,6 @@ html,body{
 
 <!-- ══ S3: INFO ══ -->
 <section class="slide" id="s3" style="background:url(images/info_bg.png) center/cover no-repeat;">
-
   <div style="position:absolute;inset:0;background:rgba(2,8,20,0.72);z-index:0"></div>
   <div class="rframe" style="width:min(80vw,800px);height:min(80vw,800px);border:1px solid rgba(34,211,238,.03);animation-duration:35s;animation-direction:reverse"></div>
   <div class="dot c" style="top:6%;right:6%"></div><div class="dot p" style="top:6%;left:6%;animation-delay:.5s"></div>
@@ -479,18 +401,11 @@ html,body{
   </div>
 </section>
 
-<!-- ══ S6: L&F כניסה + אולם (מאוחד) ══ -->
+<!-- ══ S6: כניסה לאולם ══ -->
 <section class="slide" id="s6" style="position:relative;overflow:hidden;padding:0">
-
-  <!-- תמונת הכניסה — full frame -->
   <div id="entrance-gallery" style="position:absolute;inset:0;cursor:pointer" onclick="entranceZoom()">
-
-    <!-- כניסה: תמונה מלאה -->
     <div id="eg-entrance" style="position:absolute;inset:0;transition:transform 1.2s cubic-bezier(.77,0,.18,1),opacity .7s ease">
-      <img src="images/lf_entrance_hall.png" alt="כניסה לאולם"
-           style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
-
-      <!-- טקסט overlay בחלק העליון — רקע כהה מוגבר -->
+      <img src="images/lf_entrance_hall.png" alt="כניסה לאולם" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
       <div style="position:absolute;top:0;left:0;right:0;padding:2.2rem 5% 3rem;background:linear-gradient(180deg,rgba(2,8,20,.95) 0%,rgba(2,8,20,.88) 55%,rgba(2,8,20,.55) 80%,transparent 100%);backdrop-filter:blur(4px)">
         <div class="lf-tag" style="color:var(--blue);font-size:12px;letter-spacing:.35em;text-transform:uppercase;margin-bottom:.8rem;font-family:Rubik,sans-serif">LOOK &amp; FEEL</div>
         <div style="display:flex;gap:5%;align-items:flex-start;flex-wrap:wrap">
@@ -508,66 +423,77 @@ html,body{
           </div>
         </div>
       </div>
-
-      <!-- כפתור מרכזי להיכנס לאולם -->
       <div id="eg-hint" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none">
         <div style="padding:14px 32px;background:rgba(2,8,20,.72);border:1.5px solid rgba(18,184,255,.7);border-radius:30px;backdrop-filter:blur(8px);box-shadow:0 0 24px rgba(18,184,255,.35);animation:bounce 2.2s ease-in-out infinite">
           <span style="font-size:clamp(.9rem,1.4vw,1.1rem);letter-spacing:.22em;color:#fff;text-transform:uppercase;white-space:nowrap;font-family:Rubik,sans-serif;font-weight:500">לחץ להיכנס לאולם ←</span>
         </div>
       </div>
-
-      <!-- LED border -->
       <div style="position:absolute;inset:0;border:2px solid rgba(18,184,255,.4);box-shadow:inset 0 0 40px rgba(18,184,255,.1);pointer-events:none"></div>
     </div>
-
-    <!-- אולם: שתי תמונות זו לצד זו -->
     <div id="eg-hall" style="position:absolute;inset:0;display:flex;gap:3px;opacity:0;transform:scale(1.2);transition:opacity .8s ease .25s,transform 1.2s cubic-bezier(.77,0,.18,1);pointer-events:none">
       <div style="flex:1;overflow:hidden">
-        <img src="images/lf_hall_design.png" alt="עיצוב אולם"
-             style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:brightness(.9)">
+        <img src="images/lf_hall_design.png" alt="עיצוב אולם" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:brightness(.9)">
       </div>
       <div style="flex:1;overflow:hidden">
-        <img src="images/lf_entrance_hall2.png" alt="עיצוב אולם"
-             style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:brightness(.9)">
+        <img src="images/lf_entrance_hall2.png" alt="עיצוב אולם" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:brightness(.9)">
       </div>
-      <!-- LED overlay -->
       <div style="position:absolute;inset:0;border:2px solid rgba(18,184,255,.4);box-shadow:inset 0 0 50px rgba(18,184,255,.08);pointer-events:none"></div>
-      <!-- כפתור חזרה -->
-      <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);pointer-events:auto;z-index:10"
-           onclick="event.stopPropagation();entranceBack()">
+      <div style="position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);pointer-events:auto;z-index:10" onclick="event.stopPropagation();entranceBack()">
         <span style="font-size:clamp(.85rem,1.2vw,1rem);letter-spacing:.18em;color:#fff;text-transform:uppercase;cursor:pointer;padding:12px 28px;background:rgba(2,8,20,.72);border:1.5px solid rgba(18,184,255,.5);border-radius:28px;backdrop-filter:blur(8px);box-shadow:0 0 18px rgba(18,184,255,.25);font-family:Rubik,sans-serif">← חזור לכניסה</span>
       </div>
     </div>
+  </div>
+</section>
+<script>
+var _egOpen=false;
+function entranceZoom(){if(_egOpen)return;_egOpen=true;var e=document.getElementById('eg-entrance'),h=document.getElementById('eg-hall'),hint=document.getElementById('eg-hint');hint.style.opacity='0';e.style.transform='scale(2.4)';e.style.opacity='0';h.style.opacity='1';h.style.transform='scale(1)';h.style.pointerEvents='auto';}
+function entranceBack(){if(!_egOpen)return;_egOpen=false;var e=document.getElementById('eg-entrance'),h=document.getElementById('eg-hall'),hint=document.getElementById('eg-hint');h.style.opacity='0';h.style.transform='scale(1.2)';h.style.pointerEvents='none';e.style.transform='scale(1)';e.style.opacity='1';setTimeout(function(){hint.style.opacity='1';},1000);}
+</script>
+<section class="slide" id="s7" style="display:none"></section>
+<section class="slide" id="s8" style="display:none"></section>
 
+<!-- ══ S19: PHOTO BOOTHS — אחרי כניסה לאולם ══ -->
+<section class="slide" id="s19" style="padding:2rem 0">
+  <div class="dot p" style="top:4%;right:4%;z-index:3"></div><div class="dot c" style="bottom:4%;left:4%;animation-delay:1.3s;z-index:3"></div>
+  <div class="pb-wrap ain" style="z-index:2">
+    <div class="pb-title outline-title" style="margin-bottom:2rem">עמדות<br>צילום</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;width:100%">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="pb-label">עמדת צילום 360°</div>
+        <div style="aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(18,184,255,.35);box-shadow:0 0 16px rgba(18,184,255,.12);position:relative">
+          <img src="images/booth_360.png" alt="עמדת 360" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;top:0;right:0;width:14px;height:14px;border-top:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
+          <div style="position:absolute;top:0;left:0;width:14px;height:14px;border-top:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
+          <div style="position:absolute;bottom:0;right:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
+          <div style="position:absolute;bottom:0;left:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="pb-label">מסגרת אלומיניום</div>
+        <div style="aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(18,184,255,.35);box-shadow:0 0 16px rgba(18,184,255,.12);position:relative">
+          <img src="images/booth_frame.png" alt="מסגרת אלומיניום" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;top:0;right:0;width:14px;height:14px;border-top:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
+          <div style="position:absolute;top:0;left:0;width:14px;height:14px;border-top:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
+          <div style="position:absolute;bottom:0;right:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
+          <div style="position:absolute;bottom:0;left:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="pb-label">עמדת צילום AI</div>
+        <div style="aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(18,184,255,.35);box-shadow:0 0 16px rgba(18,184,255,.12);position:relative">
+          <img src="images/booth_ai.png" alt="עמדת AI" style="width:100%;height:100%;object-fit:cover;display:block;">
+          <div style="position:absolute;top:0;right:0;width:14px;height:14px;border-top:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
+          <div style="position:absolute;top:0;left:0;width:14px;height:14px;border-top:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
+          <div style="position:absolute;bottom:0;right:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
+          <div style="position:absolute;bottom:0;left:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<script>
-var _egOpen=false;
-function entranceZoom(){
-  if(_egOpen)return; _egOpen=true;
-  var e=document.getElementById('eg-entrance'),h=document.getElementById('eg-hall'),hint=document.getElementById('eg-hint');
-  hint.style.opacity='0';
-  e.style.transform='scale(2.4)'; e.style.opacity='0';
-  h.style.opacity='1'; h.style.transform='scale(1)'; h.style.pointerEvents='auto';
-}
-function entranceBack(){
-  if(!_egOpen)return; _egOpen=false;
-  var e=document.getElementById('eg-entrance'),h=document.getElementById('eg-hall'),hint=document.getElementById('eg-hint');
-  h.style.opacity='0'; h.style.transform='scale(1.2)'; h.style.pointerEvents='none';
-  e.style.transform='scale(1)'; e.style.opacity='1';
-  setTimeout(function(){hint.style.opacity='1';},1000);
-}
-</script>
-
-<!-- S7 anchor -->
-<section class="slide" id="s7" style="display:none"></section>
-<!-- S8 anchor -->
-<section class="slide" id="s8" style="display:none"></section>
-
-<!-- ══ S9:<!-- ══ S9: L&F בר מרכזי ══ -->
+<!-- ══ S9: בר מרכזי ══ -->
 <section class="slide" id="s9" style="padding:2rem 0">
-
   <div class="dot p" style="top:4%;right:4%;z-index:3"></div><div class="dot c" style="top:4%;left:4%;animation-delay:.9s;z-index:3"></div>
   <div class="dot c" style="bottom:4%;right:4%;animation-delay:1.8s;z-index:3"></div><div class="dot w" style="bottom:4%;left:4%;animation-delay:2.7s;z-index:3"></div>
   <div class="lf-wrap ain" style="z-index:2">
@@ -590,11 +516,7 @@ function entranceBack(){
 <section class="slide" id="s10" style="padding:0;overflow:hidden">
   <div class="dot c" style="top:6%;right:6%;z-index:3"></div>
   <div class="dot p" style="top:6%;left:6%;animation-delay:.6s;z-index:3"></div>
-
-  <!-- layout: טקסט ימין + תמונה שמאל -->
   <div style="display:flex;width:100%;height:100%;align-items:stretch">
-
-    <!-- טקסט — צד ימין -->
     <div style="width:min(38%,420px);flex-shrink:0;display:flex;flex-direction:column;justify-content:center;padding:3rem 4% 3rem 2%;z-index:2">
       <div class="lf-tag ain" style="margin-bottom:1rem">FOOD &amp; DRINKS</div>
       <div class="fd-title outline-title ain" style="font-size:clamp(2.4rem,4vw,4.2rem);margin-bottom:2rem;line-height:.95">FOOD &amp;<br>DRINKS</div>
@@ -604,22 +526,18 @@ function entranceBack(){
         <div class="fd-item"><div class="fd-dot"></div><span>בר קוקטיילים</span></div>
       </div>
     </div>
-
-    <!-- תמונה — צד שמאל, גדולה, לא נחתכת -->
     <div style="flex:1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#020814;max-height:calc(100vh - 54px)">
-      <img src="images/lf_food.png" alt="אוכל ומשקאות"
-           style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;">
+      <img src="images/lf_food.png" alt="אוכל ומשקאות" style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;">
       <div style="position:absolute;inset:0;border:1px solid rgba(18,184,255,.2);box-shadow:inset 0 0 30px rgba(18,184,255,.04);pointer-events:none"></div>
       <div style="position:absolute;top:0;right:0;width:20px;height:20px;border-top:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
       <div style="position:absolute;top:0;left:0;width:20px;height:20px;border-top:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
       <div style="position:absolute;bottom:0;right:0;width:20px;height:20px;border-bottom:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
       <div style="position:absolute;bottom:0;left:0;width:20px;height:20px;border-bottom:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
     </div>
-
   </div>
 </section>
 
-<!-- ══ S11:<!-- ══ S11: HOSTS ══ -->
+<!-- ══ S11: HOSTS ══ -->
 <section class="slide" id="s11">
   <div class="dot c" style="top:6%;right:6%;z-index:3"></div><div class="dot p" style="top:6%;left:6%;animation-delay:.5s;z-index:3"></div>
   <div class="dot c" style="bottom:6%;right:6%;animation-delay:1s;z-index:3"></div><div class="dot p" style="bottom:6%;left:6%;animation-delay:1.5s;z-index:3"></div>
@@ -628,37 +546,18 @@ function entranceBack(){
     <div class="lf-tag" style="text-align:center;margin-bottom:.5rem">הנחיה</div>
     <div class="hosts-title" style="font-size:clamp(3rem,7vw,6rem);text-align:center;font-weight:900;font-family:'Rubik',sans-serif;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.7);letter-spacing:.08em;text-shadow:0 0 30px rgba(18,184,255,.9),0 0 60px rgba(18,184,255,.6),0 0 100px rgba(18,184,255,.35)">הנחיה</div>
     <div class="hosts-grid">
-      <div class="host-card ain" style="transition-delay:.1s">
-        <div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://img.haarets.co.il/bs/0000017f-e71e-df5f-a17f-ffdec74e0000/fd/82/08c339b66128e699c22dacbefa34/1044339862.jpg?precrop=562,563,x156,y3&width=375&height=375&cmsprod" alt="רון שחר"></div>
-        <div class="host-name">רון שחר</div>
-      </div>
-      <div class="host-card ain" style="transition-delay:.2s">
-        <div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://i.scdn.co/image/ab67656300005f1fa5f8ba19c8b555b5a40b81cb" alt="אסי ישראלוף"></div>
-        <div class="host-name">אסי ישראלוף</div>
-      </div>
-      <div class="host-card ain" style="transition-delay:.3s">
-        <div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/6/60/Shalom_Michaelshvili_2.jpg" alt="שלום מיכאשווילי"></div>
-        <div class="host-name">שלום מיכאשווילי</div>
-      </div>
-      <div class="host-card ain" style="transition-delay:.4s">
-        <div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://www.zohar-agency.com/wp-content/uploads/%D7%90%D7%AA%D7%A8-5-1.jpg" alt="שני כהן"></div>
-        <div class="host-name">שני כהן</div>
-      </div>
-      <div class="host-card ain" style="transition-delay:.5s">
-        <div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://www.hit.ac.il/wp-content/uploads/2024/07/%D7%9E%D7%95%D7%A9%D7%99%D7%A7-%D7%92%D7%9C%D7%90%D7%9E%D7%99%D7%9F-1X1.png" alt="מושיק גלאמין"></div>
-        <div class="host-name">מושיק גלאמין</div>
-      </div>
-      <div class="host-card ain" style="transition-delay:.6s">
-        <div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://images.maariv.co.il/image/upload/f_auto,fl_lossy/c_fill,g_faces:center,h_700,w_950/555259" alt="רונית יודקביץ"></div>
-        <div class="host-name">רונית יודקביץ</div>
-      </div>
+      <div class="host-card ain" style="transition-delay:.1s"><div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://img.haarets.co.il/bs/0000017f-e71e-df5f-a17f-ffdec74e0000/fd/82/08c339b66128e699c22dacbefa34/1044339862.jpg?precrop=562,563,x156,y3&width=375&height=375&cmsprod" alt="רון שחר"></div><div class="host-name">רון שחר</div></div>
+      <div class="host-card ain" style="transition-delay:.2s"><div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://i.scdn.co/image/ab67656300005f1fa5f8ba19c8b555b5a40b81cb" alt="אסי ישראלוף"></div><div class="host-name">אסי ישראלוף</div></div>
+      <div class="host-card ain" style="transition-delay:.3s"><div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://upload.wikimedia.org/wikipedia/commons/6/60/Shalom_Michaelshvili_2.jpg" alt="שלום מיכאשווילי"></div><div class="host-name">שלום מיכאשווילי</div></div>
+      <div class="host-card ain" style="transition-delay:.4s"><div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://www.zohar-agency.com/wp-content/uploads/%D7%90%D7%AA%D7%A8-5-1.jpg" alt="שני כהן"></div><div class="host-name">שני כהן</div></div>
+      <div class="host-card ain" style="transition-delay:.5s"><div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://www.hit.ac.il/wp-content/uploads/2024/07/%D7%9E%D7%95%D7%A9%D7%99%D7%A7-%D7%92%D7%9C%D7%90%D7%9E%D7%99%D7%9F-1X1.png" alt="מושיק גלאמין"></div><div class="host-name">מושיק גלאמין</div></div>
+      <div class="host-card ain" style="transition-delay:.6s"><div class="host-img-wrap"><img referrerpolicy="no-referrer" src="https://images.maariv.co.il/image/upload/f_auto,fl_lossy/c_fill,g_faces:center,h_700,w_950/555259" alt="רונית יודקביץ"></div><div class="host-name">רונית יודקביץ</div></div>
     </div>
   </div>
 </section>
 
-<!-- ══ S12: ITEM 1 — פתיחה 55 שנה ══ -->
+<!-- ══ S12: ITEM 1 ══ -->
 <section class="slide" id="s12">
-
   <div class="dot c" style="top:6%;right:6%;z-index:3"></div><div class="dot p" style="bottom:6%;left:6%;animation-delay:1.2s;z-index:3"></div>
   <div class="item-wrap ain" style="z-index:2">
     <div class="item-left">
@@ -677,9 +576,8 @@ function entranceBack(){
   </div>
 </section>
 
-<!-- ══ S13: ITEM 2 — פתיחה קצבית ══ -->
+<!-- ══ S13: ITEM 2 ══ -->
 <section class="slide" id="s13">
-
   <div class="dot p" style="top:6%;right:6%;z-index:3"></div><div class="dot c" style="bottom:6%;left:6%;animation-delay:1s;z-index:3"></div>
   <div class="item-wrap ain" style="z-index:2">
     <div class="item-left">
@@ -698,15 +596,14 @@ function entranceBack(){
   </div>
 </section>
 
-<!-- ══ S14: ITEM 3 — מסגרות לד ══ -->
+<!-- ══ S14: ITEM 3 ══ -->
 <section class="slide" id="s14">
-
   <div class="dot c" style="top:6%;right:6%;z-index:3"></div><div class="dot w" style="top:6%;left:6%;animation-delay:.6s;z-index:3"></div>
   <div class="dot p" style="bottom:6%;right:6%;animation-delay:1.2s;z-index:3"></div>
   <div class="item-wrap ain" style="z-index:2">
     <div class="item-left">
       <div class="item-num">אייטם · 03</div>
-      <div class="item-title">עוצמה<br><span style="color:var(--blue)">מסגרות LED</span></div>
+      <div class="item-title">FRAMING SUCCESS<br><span style="color:var(--blue)">מסגרות LED</span></div>
       <div class="item-body">
         מסע חזותי עוצמתי שעובר בין לוקיישנים וכלים שונים דרך מסגרות לד פיזיות — כל מסגרת פותחת חלון חדש לעולם אחר, ממחישה את הקונספט: <strong style="color:var(--blue)">FRAMING THE FUTURE.</strong><br><br>
         מעבר נזיל בין פנים לחוץ, בין עבר לעתיד, בין אור לצל — הכל דרך המסגרת.
@@ -723,9 +620,8 @@ function entranceBack(){
   </div>
 </section>
 
-<!-- ══ S15: ITEM 4 — DON'T BLINK ══ -->
+<!-- ══ S15: ITEM 4 ══ -->
 <section class="slide" id="s15">
-
   <div class="dot p" style="top:6%;right:6%;z-index:3"></div><div class="dot c" style="bottom:6%;left:6%;animation-delay:1.5s;z-index:3"></div>
   <div class="item-wrap ain" style="z-index:2">
     <div class="item-left">
@@ -744,9 +640,8 @@ function entranceBack(){
   </div>
 </section>
 
-<!-- ══ S17: ITEM 6 — היסטורי + לייזר ══ -->
+<!-- ══ S17: ITEM 5 ══ -->
 <section class="slide" id="s17">
-
   <div class="dot p" style="top:6%;right:6%;z-index:3"></div><div class="dot c" style="bottom:6%;left:6%;animation-delay:1.1s;z-index:3"></div>
   <div class="item-wrap ain" style="z-index:2">
     <div class="item-left">
@@ -790,12 +685,8 @@ function entranceBack(){
         <div style="position:absolute;bottom:0;left:0;right:0;padding:.5rem .8rem;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:clamp(.82rem,1.3vw,1rem);font-weight:700;font-family:'Rubik',sans-serif">פאר טסי</div>
       </div>
       <div style="grid-column:2/3;grid-row:2/3;position:relative;overflow:hidden;border:1.5px solid rgba(18,184,255,.4);box-shadow:0 0 8px rgba(18,184,255,.15);display:flex;gap:3px">
-        <div style="flex:1;overflow:hidden">
-          <img referrerpolicy="no-referrer" src="https://medias.atmag.co.il/www/uploads/2021/08/1630325779_15115-600x600-1700120545.jpg" alt="ריטה" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(.88)">
-        </div>
-        <div style="flex:1;overflow:hidden">
-          <img referrerpolicy="no-referrer" src="https://ynet-pic1.yit.co.il/cdn-cgi/image/f=auto,w=740,q=75/picserver6/crop_images/2025/04/02/rJlRSA6c61g/rJlRSA6c61g_34_38_1854_1043_0_x-large.jpg" alt="משה פרץ" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(.88)">
-        </div>
+        <div style="flex:1;overflow:hidden"><img referrerpolicy="no-referrer" src="https://medias.atmag.co.il/www/uploads/2021/08/1630325779_15115-600x600-1700120545.jpg" alt="ריטה" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(.88)"></div>
+        <div style="flex:1;overflow:hidden"><img referrerpolicy="no-referrer" src="https://ynet-pic1.yit.co.il/cdn-cgi/image/f=auto,w=740,q=75/picserver6/crop_images/2025/04/02/rJlRSA6c61g/rJlRSA6c61g_34_38_1854_1043_0_x-large.jpg" alt="משה פרץ" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter:brightness(.88)"></div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:.5rem .8rem;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:clamp(.78rem,1.1vw,.92rem);font-weight:700;font-family:'Rubik',sans-serif">ריטה מארחת את משה פרץ</div>
       </div>
       <div style="grid-column:3/4;grid-row:2/3;display:flex;flex-direction:column;gap:6px;overflow:hidden">
@@ -812,49 +703,8 @@ function entranceBack(){
   </div>
 </section>
 
-<!-- ══ S19: PHOTO BOOTHS ══ -->
-<section class="slide" id="s19" style="padding:2rem 0">
-  <div class="dot p" style="top:4%;right:4%;z-index:3"></div><div class="dot c" style="bottom:4%;left:4%;animation-delay:1.3s;z-index:3"></div>
-  <div class="pb-wrap ain" style="z-index:2">
-    <div class="pb-title outline-title" style="margin-bottom:2rem">עמדות<br>צילום</div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;width:100%">
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div class="pb-label">עמדת צילום 360°</div>
-        <div style="aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(18,184,255,.35);box-shadow:0 0 16px rgba(18,184,255,.12);position:relative">
-          <img src="images/booth_360.png" alt="עמדת 360" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <div style="position:absolute;top:0;right:0;width:14px;height:14px;border-top:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
-          <div style="position:absolute;top:0;left:0;width:14px;height:14px;border-top:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
-          <div style="position:absolute;bottom:0;right:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
-          <div style="position:absolute;bottom:0;left:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
-        </div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div class="pb-label">מסגרת אלומיניום</div>
-        <div style="aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(18,184,255,.35);box-shadow:0 0 16px rgba(18,184,255,.12);position:relative">
-          <img src="images/booth_frame.png" alt="מסגרת אלומיניום" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <div style="position:absolute;top:0;right:0;width:14px;height:14px;border-top:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
-          <div style="position:absolute;top:0;left:0;width:14px;height:14px;border-top:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
-          <div style="position:absolute;bottom:0;right:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
-          <div style="position:absolute;bottom:0;left:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
-        </div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <div class="pb-label">עמדת צילום AI</div>
-        <div style="aspect-ratio:3/4;overflow:hidden;border:1px solid rgba(18,184,255,.35);box-shadow:0 0 16px rgba(18,184,255,.12);position:relative">
-          <img src="images/booth_ai.png" alt="עמדת AI" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <div style="position:absolute;top:0;right:0;width:14px;height:14px;border-top:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
-          <div style="position:absolute;top:0;left:0;width:14px;height:14px;border-top:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
-          <div style="position:absolute;bottom:0;right:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-right:2px solid var(--blue)"></div>
-          <div style="position:absolute;bottom:0;left:0;width:14px;height:14px;border-bottom:2px solid var(--blue);border-left:2px solid var(--blue)"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══ S20: MORE INFO ══ -->
 <section class="slide" id="s20">
-
   <div class="dot c" style="top:7%;right:7%;z-index:3"></div><div class="dot p" style="top:7%;left:7%;animation-delay:.6s;z-index:3"></div>
   <div class="dot c" style="bottom:7%;right:7%;animation-delay:1.2s;z-index:3"></div><div class="dot p" style="bottom:7%;left:7%;animation-delay:1.8s;z-index:3"></div>
   <div class="more-wrap ain" style="z-index:2">
@@ -892,61 +742,50 @@ function bindImageFallbacks(scope=document){
     img.dataset.boundFallback='1';
     img.setAttribute('referrerpolicy','no-referrer');
     img.addEventListener('error',function(){
-      if(!this.dataset.failedOnce){
-        this.dataset.failedOnce='1';
-        this.removeAttribute('crossorigin');
-        const s=this.src;this.src='';
-        setTimeout(()=>{this.src=s;},80);
-        return;
-      }
-      this.style.background='rgba(18,184,255,0.05)';
-      this.style.opacity='0.25';
+      if(!this.dataset.failedOnce){this.dataset.failedOnce='1';this.removeAttribute('crossorigin');const s=this.src;this.src='';setTimeout(()=>{this.src=s;},80);return;}
+      this.style.background='rgba(18,184,255,0.05)';this.style.opacity='0.25';
     });
   });
 }
 
-// ─── NAV ───
-const slidesEl = document.getElementById('slides');
-const navBtns = document.querySelectorAll('.nb');
-const prog = document.getElementById('prog');
-const SIDS = ['s0','s1','s2','s3','s4','s5','s5b','s6','s9','s10','s11','s12','s13','s14','s15','s17','s18','s19','s20','s21'];
-const TOTAL = SIDS.length;
+const slidesEl=document.getElementById('slides');
+const navBtns=document.querySelectorAll('.nb');
+const prog=document.getElementById('prog');
+// סדר: s0,s1,s2,s3,s4,s5,s5b,s6,s19,s9,s10,s11,s12,s13,s14,s15,s17,s18,s20,s21
+const SIDS=['s0','s1','s2','s3','s4','s5','s5b','s6','s19','s9','s10','s11','s12','s13','s14','s15','s17','s18','s20','s21'];
 
 function goTo(i){document.getElementById(SIDS[i])?.scrollIntoView({behavior:'smooth'})}
 
 function updateUI(){
-  const st = slidesEl.scrollTop;
-  const th = slidesEl.scrollHeight - slidesEl.clientHeight;
-  prog.style.width = (th>0?st/th*100:0)+'%';
+  const st=slidesEl.scrollTop;
+  const th=slidesEl.scrollHeight-slidesEl.clientHeight;
+  prog.style.width=(th>0?st/th*100:0)+'%';
   let cur=0;
-  SIDS.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.offsetTop-80<=st)cur=i});
-  // nav has fewer buttons than slides so map carefully
-  const navMap={0:0,1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,11:11,12:11,13:11,14:11,15:12,16:12,17:13,18:14,19:15};
+  SIDS.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.offsetTop-80<=st)cur=i;});
+  // navMap: slide-index → nav-button-index (16 כפתורים)
+  // 0:בית,1:לוגו,2:קונספט,3:INFO,4:האנגר,5:LAGO,6:חוות,7:כניסה,8:עמדות,9:בר,10:אוכל,11:הנחיה,12:במה,13:LIVE,14:עוד,15:סיום
+  const navMap={0:0,1:1,2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,11:11,12:12,13:12,14:12,15:12,16:13,17:13,18:14,19:15};
   navBtns.forEach((b,i)=>b.classList.remove('active'));
   let nb=0;
-  for(let i=0;i<=cur;i++){if(navMap[i]!==undefined)nb=navMap[i]}
+  for(let i=0;i<=cur;i++){if(navMap[i]!==undefined)nb=navMap[i];}
   if(navBtns[nb])navBtns[nb].classList.add('active');
   document.querySelectorAll('.ain').forEach(el=>{
     if(el.getBoundingClientRect().top<window.innerHeight*.9)el.classList.add('in');
   });
 }
 slidesEl.addEventListener('scroll',updateUI,{passive:true});
-
 bindImageFallbacks(document);
 setTimeout(updateUI,300);
 
-// ── SLIDE NAV BUTTONS ──
 function navSlide(dir){
-  const SIDS=['s0','s1','s2','s3','s4','s5','s5b','s6','s9','s10','s11','s12','s13','s14','s15','s17','s18','s19','s20','s21'];
-  const slidesEl=document.getElementById('slides');
+  const S=['s0','s1','s2','s3','s4','s5','s5b','s6','s19','s9','s10','s11','s12','s13','s14','s15','s17','s18','s20','s21'];
   const st=slidesEl.scrollTop;
   let cur=0;
-  SIDS.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.offsetTop-80<=st)cur=i;});
-  const next=Math.max(0,Math.min(SIDS.length-1,cur+dir));
-  document.getElementById(SIDS[next])?.scrollIntoView({behavior:'smooth'});
+  S.forEach((id,i)=>{const el=document.getElementById(id);if(el&&el.offsetTop-80<=st)cur=i;});
+  const next=Math.max(0,Math.min(S.length-1,cur+dir));
+  document.getElementById(S[next])?.scrollIntoView({behavior:'smooth'});
 }
 
-// ─── PARTICLES ───
 const canvas=document.getElementById('particles');
 const ctx=canvas.getContext('2d');
 let W,H,pts=[];
@@ -956,16 +795,8 @@ const cols=['rgba(168,85,247,','rgba(34,211,238,','rgba(224,240,255,'];
 for(let i=0;i<70;i++){pts.push({x:Math.random()*1920,y:Math.random()*1080,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.4+.4,a:Math.random()*.4+.1,c:cols[Math.floor(Math.random()*cols.length)]})}
 function drawP(){
   ctx.clearRect(0,0,W,H);
-  pts.forEach(p=>{
-    p.x+=p.vx;p.y+=p.vy;
-    if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
-    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle=p.c+p.a+')';ctx.fill();
-  });
-  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
-    const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
-    if(d<110){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(34,211,238,${.06*(1-d/110)})`;ctx.lineWidth=.5;ctx.stroke()}
-  }
+  pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.c+p.a+')';ctx.fill();});
+  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<110){ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle=`rgba(34,211,238,${.06*(1-d/110)})`;ctx.lineWidth=.5;ctx.stroke()}}
   requestAnimationFrame(drawP);
 }
 drawP();
